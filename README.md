@@ -6,7 +6,7 @@ Code, frozen protocol, analysis plan, per-run results and figures of the measure
 **Authors:** Ronald Ponguillo-Intriago, Derian S. Barros Palma, Jonathan A. Rodríguez Borbor.
 Facultad de Ciencias Matemáticas y Físicas, Universidad de Guayaquil, Guayaquil 090510, Ecuador.
 
-Repository: https://github.com/rponguil/qos-voice-uplink-replication. Data DOI: `[ZENODO DATA DOI]`. Code DOI: `[ZENODO CODE DOI]`.
+Repository: https://github.com/rponguil/qos-voice-uplink-replication. Data DOI: [10.5281/zenodo.23604110](https://doi.org/10.5281/zenodo.23604110). Code DOI: `[ZENODO CODE DOI]`.
 
 The folder layout mirrors the working project (`F2_…`, `F3_…`, `F4_…`, `F5_…`), so every script runs unchanged with its relative paths.
 
@@ -35,7 +35,7 @@ Folder names, result file names and some identifiers in the data keep their Span
 
 | Item | Size | Where |
 |---|---|---|
-| Packet captures of every run (`sink.pcap`, `src_*.pcap`) | 14 GB | Zenodo data record `[ZENODO DATA DOI]` (proposed) |
+| Packet captures of every run (`sink.pcap`, `src_*.pcap`) | 14 GB | Zenodo data record [10.5281/zenodo.23604110](https://doi.org/10.5281/zenodo.23604110) |
 | Per-packet probe traces (`send_*.csv`, `recv_*.csv`), iperf3 JSON, router/modem text logs of every run | ≈ 6.2 GB (CSV 5.3 GB; JSON 0.47 GB; text 0.40 GB) | same Zenodo record |
 | Invalid attempts kept with their reason (`F4_campana/campaign/_invalid/`) | 1.2 GB | same Zenodo record |
 | Cisco IOS images (IOU L3 15.5(2)T, c7200 15.3(3)XB12) | — | **Not distributed** (licensed). The project file references them by name only |
@@ -99,6 +99,6 @@ Dynamips measured at the start of each session). Changes made after the protocol
 ## 6. Open items (to be completed before release)
 
 - [ ] Title in `README.md` and `CITATION.cff` checked against the final manuscript.
-- [ ] Zenodo data record with the raw archive; DOI in this README and in the manuscript (*Data availability*).
+- [x] Zenodo data record with the raw archive; DOI in this README. To do: DOI in the manuscript (*Data availability*); publish the record.
 - [ ] Code DOI from the GitHub release `v1.0.0`.
 - [ ] `CHECKSUMS.sha256` at the repository root regenerated just before the release.

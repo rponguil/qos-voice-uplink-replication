@@ -16,5 +16,9 @@ authors:
     affiliation: "Facultad de Ciencias Matemáticas y Físicas, Universidad de Guayaquil, Guayaquil 090510, Ecuador"
 version: "1.0.0"
 doi: "[ZENODO CODE DOI]"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23604110"
+    description: "Raw measurement data (Zenodo)"
 license: MIT
 repository-code: "https://github.com/rponguil/qos-voice-uplink-replication"
