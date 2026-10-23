@@ -1,0 +1,59 @@
+5.5 CLOSURE: 12 failed shaper attempts substituted for their accepted runs
+  CHANGE H4 ('H4 E1 k=3', 'CAKE', 'E1 L=5000k k=3'): not comparable -> comparable
+  H3 p99_CBWFQ: a 0.2720 (base 0.2713), b 7.0023 (base 7.0071)
+  H3 Delta: a -0.8897 (base -0.8899), b 7.0090 (base 7.0138)
+  decisions changed: 1
+
+H4 with mean difference (X - LLQ) and 90 % CI; direction (exploratory): 'equivalent' if TOST comparable (Holm); else 'better' if the 90 % CI is entirely below 0, 'worse' if entirely above 0, 'inconclusive' otherwise. Floor-corrected: d - (floor_LXR - floor_IOU) at that L.
+  H4 E1 k=1 CAKE E1 L=500k k=1                      mean d    -2.21 [90% -2.60,-1.83] (margin 3.02) -> equivalent   | floor-corrected    -2.14 [-2.53,-1.76] -> equivalent
+  H4 E1 k=1 CAKE E1 L=1000k k=1                     mean d    -4.17 [90% -4.30,-4.04] (margin 2.0) -> better       | floor-corrected    -4.10 [-4.23,-3.97] -> better
+  H4 E1 k=1 CAKE E1 L=2000k k=1                     mean d    -3.78 [90% -3.96,-3.60] (margin 2.0) -> better       | floor-corrected    -3.71 [-3.89,-3.54] -> better
+  H4 E1 k=1 CAKE E1 L=3000k k=1                     mean d    -2.49 [90% -2.66,-2.32] (margin 2.0) -> better       | floor-corrected    -2.42 [-2.59,-2.25] -> better
+  H4 E1 k=1 CAKE E1 L=5000k k=1                     mean d    -2.28 [90% -2.30,-2.25] (margin 2.0) -> better       | floor-corrected    -2.20 [-2.23,-2.18] -> better
+  H4 E1 k=1 FQC  E1 L=500k k=1                      mean d    +4.82 [90% +2.26,+7.37] (margin 3.02) -> worse        | floor-corrected    +4.89 [+2.34,+7.44] -> worse
+  H4 E1 k=1 FQC  E1 L=1000k k=1                     mean d    -3.61 [90% -3.97,-3.24] (margin 2.0) -> better       | floor-corrected    -3.54 [-3.90,-3.18] -> better
+  H4 E1 k=1 FQC  E1 L=2000k k=1                     mean d    -1.84 [90% -2.15,-1.52] (margin 2.0) -> better       | floor-corrected    -1.77 [-2.09,-1.45] -> better
+  H4 E1 k=1 FQC  E1 L=3000k k=1                     mean d    -2.49 [90% -2.66,-2.32] (margin 2.0) -> better       | floor-corrected    -2.42 [-2.58,-2.25] -> better
+  H4 E1 k=1 FQC  E1 L=5000k k=1                     mean d    -2.27 [90% -2.29,-2.25] (margin 2.0) -> better       | floor-corrected    -2.20 [-2.22,-2.18] -> better
+  H4 E1 k=2 CAKE E1 L=500k k=2                      mean d    -0.72 [90% -1.18,-0.26] (margin 3.02) -> equivalent   | floor-corrected    -0.65 [-1.11,-0.19] -> equivalent
+  H4 E1 k=2 CAKE E1 L=1000k k=2                     mean d    -3.61 [90% -3.77,-3.45] (margin 2.0) -> better       | floor-corrected    -3.54 [-3.70,-3.39] -> better
+  H4 E1 k=2 CAKE E1 L=2000k k=2                     mean d    -3.31 [90% -3.45,-3.17] (margin 2.0) -> better       | floor-corrected    -3.25 [-3.38,-3.11] -> better
+  H4 E1 k=2 CAKE E1 L=3000k k=2                     mean d    -2.39 [90% -2.45,-2.33] (margin 2.0) -> better       | floor-corrected    -2.32 [-2.38,-2.25] -> better
+  H4 E1 k=2 CAKE E1 L=5000k k=2                     mean d    -1.80 [90% -1.87,-1.73] (margin 2.0) -> equivalent   | floor-corrected    -1.73 [-1.80,-1.66] -> equivalent
+  H4 E1 k=2 FQC  E1 L=500k k=2                      mean d   +38.87 [90% +38.01,+39.73] (margin 3.02) -> worse        | floor-corrected   +38.94 [+38.08,+39.80] -> worse
+  H4 E1 k=2 FQC  E1 L=1000k k=2                     mean d    +7.94 [90% +7.73,+8.14] (margin 2.0) -> worse        | floor-corrected    +8.00 [+7.80,+8.21] -> worse
+  H4 E1 k=2 FQC  E1 L=2000k k=2                     mean d    -3.19 [90% -3.33,-3.04] (margin 2.0) -> better       | floor-corrected    -3.12 [-3.27,-2.97] -> better
+  H4 E1 k=2 FQC  E1 L=3000k k=2                     mean d    -2.32 [90% -2.39,-2.25] (margin 2.0) -> better       | floor-corrected    -2.25 [-2.32,-2.18] -> better
+  H4 E1 k=2 FQC  E1 L=5000k k=2                     mean d    -1.78 [90% -1.85,-1.72] (margin 2.0) -> equivalent   | floor-corrected    -1.71 [-1.78,-1.65] -> equivalent
+  H4 E1 k=3 CAKE E1 L=500k k=3                      mean d    -1.69 [90% -2.14,-1.24] (margin 3.02) -> equivalent   | floor-corrected    -1.62 [-2.07,-1.17] -> equivalent
+  H4 E1 k=3 CAKE E1 L=1000k k=3                     mean d    -3.68 [90% -3.89,-3.46] (margin 2.0) -> better       | floor-corrected    -3.61 [-3.82,-3.40] -> better
+  H4 E1 k=3 CAKE E1 L=2000k k=3                     mean d    -3.39 [90% -3.57,-3.21] (margin 2.0) -> better       | floor-corrected    -3.32 [-3.50,-3.14] -> better
+  H4 E1 k=3 CAKE E1 L=3000k k=3                     mean d    -2.46 [90% -2.50,-2.43] (margin 2.0) -> better       | floor-corrected    -2.39 [-2.43,-2.36] -> better
+  H4 E1 k=3 CAKE E1 L=5000k k=3                     mean d    -1.83 [90% -1.94,-1.72] (margin 2.0) -> better       | floor-corrected    -1.76 [-1.87,-1.65] -> equivalent
+  H4 E1 k=3 FQC  E1 L=500k k=3                      mean d   +59.95 [90% +58.99,+60.90] (margin 3.02) -> worse        | floor-corrected   +60.02 [+59.07,+60.98] -> worse
+  H4 E1 k=3 FQC  E1 L=1000k k=3                     mean d   +20.11 [90% +19.74,+20.48] (margin 2.0) -> worse        | floor-corrected   +20.18 [+19.81,+20.54] -> worse
+  H4 E1 k=3 FQC  E1 L=2000k k=3                     mean d    -0.26 [90% -0.57,+0.05] (margin 2.0) -> equivalent   | floor-corrected    -0.19 [-0.50,+0.12] -> equivalent
+  H4 E1 k=3 FQC  E1 L=3000k k=3                     mean d    -2.24 [90% -2.36,-2.13] (margin 2.0) -> better       | floor-corrected    -2.17 [-2.29,-2.06] -> better
+  H4 E1 k=3 FQC  E1 L=5000k k=3                     mean d    -1.72 [90% -1.83,-1.62] (margin 2.0) -> equivalent   | floor-corrected    -1.65 [-1.76,-1.55] -> equivalent
+  H4 E2 k=3 CAKE E2 L=500k k=3                      mean d    -1.23 [90% -1.72,-0.75] (margin 3.02) -> equivalent   | floor-corrected    -1.16 [-1.64,-0.67] -> equivalent
+  H4 E2 k=3 CAKE E2 L=500k k=3 frame=590            mean d    -3.75 [90% -4.37,-3.12] (margin 3.02) -> better       | floor-corrected    -3.67 [-4.30,-3.04] -> better
+  H4 E2 k=3 CAKE E2 L=1000k k=3                     mean d    -3.59 [90% -3.81,-3.36] (margin 2.0) -> better       | floor-corrected    -3.52 [-3.74,-3.30] -> better
+  H4 E2 k=3 CAKE E2 L=1000k k=3 calls=4             mean d  +191.51 [90% +190.22,+192.81] (margin 2.0) -> worse        | floor-corrected  +191.58 [+190.28,+192.88] -> worse
+  H4 E2 k=3 CAKE E2 L=1000k k=3 frame=590           mean d    -3.02 [90% -3.25,-2.80] (margin 2.0) -> better       | floor-corrected    -2.96 [-3.18,-2.73] -> better
+  H4 E2 k=3 CAKE E2 L=1000k k=3 frame=590 calls=4   mean d  +193.73 [90% +192.93,+194.53] (margin 2.0) -> worse        | floor-corrected  +193.80 [+193.00,+194.60] -> worse
+  H4 E2 k=3 CAKE E2 L=5000k k=3                     mean d    -1.82 [90% -1.92,-1.73] (margin 2.0) -> equivalent   | floor-corrected    -1.75 [-1.85,-1.66] -> equivalent
+  H4 E2 k=3 CAKE E2 L=5000k k=3 calls=4             mean d    -1.73 [90% -1.84,-1.61] (margin 2.0) -> equivalent   | floor-corrected    -1.66 [-1.77,-1.54] -> equivalent
+  H4 E2 k=3 CAKE E2 L=5000k k=3 frame=590           mean d    -1.30 [90% -1.46,-1.14] (margin 2.0) -> equivalent   | floor-corrected    -1.23 [-1.39,-1.07] -> equivalent
+  H4 E2 k=3 CAKE E2 L=5000k k=3 frame=590 calls=4   mean d    -0.91 [90% -1.08,-0.73] (margin 2.0) -> equivalent   | floor-corrected    -0.84 [-1.01,-0.66] -> equivalent
+  H4 E2 k=3 FQC  E2 L=500k k=3                      mean d   +60.00 [90% +59.04,+60.97] (margin 3.02) -> worse        | floor-corrected   +60.08 [+59.11,+61.04] -> worse
+  H4 E2 k=3 FQC  E2 L=500k k=3 frame=590            mean d   +78.30 [90% +77.17,+79.43] (margin 3.02) -> worse        | floor-corrected   +78.37 [+77.25,+79.50] -> worse
+  H4 E2 k=3 FQC  E2 L=1000k k=3                     mean d   +19.36 [90% +18.92,+19.80] (margin 2.0) -> worse        | floor-corrected   +19.43 [+18.99,+19.87] -> worse
+  H4 E2 k=3 FQC  E2 L=1000k k=3 calls=4             mean d   +38.96 [90% +37.99,+39.92] (margin 2.0) -> worse        | floor-corrected   +39.03 [+38.06,+39.99] -> worse
+  H4 E2 k=3 FQC  E2 L=1000k k=3 frame=590           mean d   +34.74 [90% +34.26,+35.22] (margin 2.0) -> worse        | floor-corrected   +34.81 [+34.33,+35.29] -> worse
+  H4 E2 k=3 FQC  E2 L=1000k k=3 frame=590 calls=4   mean d   +57.48 [90% +52.07,+62.90] (margin 2.0) -> worse        | floor-corrected   +57.55 [+52.14,+62.96] -> worse
+  H4 E2 k=3 FQC  E2 L=5000k k=3                     mean d    -1.75 [90% -1.85,-1.64] (margin 2.0) -> equivalent   | floor-corrected    -1.68 [-1.78,-1.57] -> equivalent
+  H4 E2 k=3 FQC  E2 L=5000k k=3 calls=4             mean d    -1.58 [90% -1.70,-1.46] (margin 2.0) -> equivalent   | floor-corrected    -1.51 [-1.63,-1.39] -> equivalent
+  H4 E2 k=3 FQC  E2 L=5000k k=3 frame=590           mean d  +206.80 [90% -154.85,+568.45] (margin 2.0) -> inconclusive | floor-corrected  +206.87 [-154.78,+568.52] -> inconclusive
+  H4 E2 k=3 FQC  E2 L=5000k k=3 frame=590 calls=4   mean d    -0.63 [90% -0.89,-0.36] (margin 2.0) -> equivalent   | floor-corrected    -0.56 [-0.82,-0.29] -> equivalent
+  counts raw: {('CAKE', 'equivalent'): 9, ('CAKE', 'better'): 14, ('FQC', 'worse'): 11, ('FQC', 'better'): 7, ('FQC', 'equivalent'): 6, ('CAKE', 'worse'): 2, ('FQC', 'inconclusive'): 1}
+  counts floor-corrected: {('CAKE', 'equivalent'): 10, ('CAKE', 'better'): 13, ('FQC', 'worse'): 11, ('FQC', 'better'): 7, ('FQC', 'equivalent'): 6, ('CAKE', 'worse'): 2, ('FQC', 'inconclusive'): 1}

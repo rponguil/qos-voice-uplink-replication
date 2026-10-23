@@ -1,0 +1,136 @@
+{
+ "p99_runs": {
+  "CNEG_IOU_CBWFQ_L500k_k3_m0.2_c1_f1514_unmarked_r01": 216.308052,
+  "CPOS_IOU_FIFO_L1000k_k1_m0.2_c1_f1514_pos_r15": 22.268165,
+  "CPOS_LXR_FIFO_L5000k_k1_m0.2_c1_f1514_pos_r03": 2.915624,
+  "CPOS_LXR_FIFO_L5000k_k1_m0.2_c1_f1514_pos_r12": 2.909411,
+  "E1R_IOU_CBWFQ_L2000k_k3_m1_c1_f1514_r14": 74.179094,
+  "E1R_IOU_CBWFQ_L2000k_k3_m3_c1_f1514_r16": 39.200999,
+  "E1R_IOU_CBWFQ_L5000k_k3_m1_c1_f1514_r15": 73.571803,
+  "E1_IOU_CBWFQ_L3000k_k3_m0.2_c1_f1514_r14": 126.625003,
+  "E1_IOU_FIFO_L2000k_k3_m0.2_c1_f1514_r01": 379.935506,
+  "E1_IOU_FIFO_L500k_k3_m0.2_c1_f1514_r17": 1062.0706,
+  "E1_IOU_LLQ_L1000k_k2_m0.2_c1_f1514_r01": 17.685432,
+  "E1_IOU_LLQ_L3000k_k3_m0.2_c1_f1514_r05": 7.491739,
+  "E1_LXR_FIFO_L2000k_k3_m0.2_c1_f1514_r08": 333.245692,
+  "E1_LXR_FIFO_L500k_k3_m0.2_c1_f1514_r13": 971.424179,
+  "E1_LXR_FQC_L2000k_k3_m0.2_c1_f1514_r10": 10.65969,
+  "E2_IOU_CBWFQ_L1000k_k3_m0.2_c1_f590_r10": 118.003765,
+  "E2_IOU_CBWFQ_L1000k_k3_m0.2_c4_f1514_r11": 42.52892,
+  "E2_IOU_LLQ_L5000k_k3_m0.2_c1_f1514_r10": 5.252194,
+  "E2_IOU_LLQ_L5000k_k3_m0.2_c4_f1514_r03": 4.600997,
+  "E2_LXR_CAKE_L1000k_k3_m0.2_c1_f1514_r04": 14.469616,
+  "E2_LXR_FQC_L1000k_k3_m0.2_c1_f1514_r15": 37.811229,
+  "E3_IOU_LLQ_L1000k_k3_m0.2_c1_f1514_vx1.5_r01": 18.447885,
+  "E4d_IOU_FIFO_L500k_k0_m0.2_c1_f1514_Q034_r02": 663.182223,
+  "FLOOR_IOU_FIFO_L3000k_k0_m0.2_c1_f1514_floor_r17": 0.946022,
+  "S_IOU_CBWFQ_L1000k_k3_m0.2_c1_f1514_r0.9_r13": 124.871253,
+  "S_IOU_LLQ_L1000k_k3_m0.2_c1_f1514_Q256_r08_ac": 18.507925,
+  "S_IOU_LLQ_L5000k_k3_m0.2_c1_f1514_r0.9_r01": 4.60667,
+  "S_IOU_LLQ_L5000k_k3_m0.2_c1_f1514_r0.9_r03": 4.59627,
+  "S_IOU_LLQ_L5000k_k3_m0.2_c1_f1514_r0.9_r06": 4.744754,
+  "S_LXR_FQC_L5000k_k3_m0.2_c1_f1514_htbBc_r13": 3.056987
+ },
+ "H2_E1_k3_1M": {
+  "family": "H2 E1 k=3",
+  "cell": "E1 L=1000k k=3",
+  "block": "E1_L1000k_k3_m0.2_c1_f1514",
+  "n": 17,
+  "mean_delta": 103.15968582352941,
+  "median_delta": 103.307947,
+  "boot95_median": [
+   102.070123,
+   104.05788
+  ],
+  "cliff_delta": 1.0,
+  "p_signperm": 7.62939453125e-06,
+  "p_wilcoxon": 7.62939453125e-06,
+  "p_holm": 3.814697265625e-05,
+  "delta_positive": true,
+  "p_wilcoxon_holm": 3.814697265625e-05
+ },
+ "H2_E1_k3_5M": {
+  "family": "H2 E1 k=3",
+  "cell": "E1 L=5000k k=3",
+  "block": "E1_L5000k_k3_m0.2_c1_f1514",
+  "n": 17,
+  "mean_delta": 114.1177834117647,
+  "median_delta": 114.14618,
+  "boot95_median": [
+   113.017851,
+   115.059108
+  ],
+  "cliff_delta": 1.0,
+  "p_signperm": 7.62939453125e-06,
+  "p_wilcoxon": 7.62939453125e-06,
+  "p_holm": 3.814697265625e-05,
+  "delta_positive": true,
+  "p_wilcoxon_holm": 3.814697265625e-05
+ },
+ "H1_1M": {
+  "family": "H1 E1 k=1",
+  "cell": "E1 L=1000k k=1",
+  "block": "E1_L1000k_k1_m0.2_c1_f1514",
+  "n": 17,
+  "mean_d": 38.416316941176476,
+  "ci90_lo": 37.911402815812565,
+  "ci90_hi": 38.921231066540386,
+  "median_d": 38.376830999999996,
+  "boot95_median": [
+   37.425853,
+   39.500694
+  ],
+  "margin": 2.0,
+  "p_low": 0.0,
+  "p_high": 1.0,
+  "p_tost": 1.0,
+  "p_holm": 1.0,
+  "equivalent": false,
+  "p99_CBWFQ_median": 57.024612,
+  "p99_LLQ_median": 18.647781,
+  "LLQ_bound_Ts_Tvoz_floor": 15.893194000000001,
+  "exempt_cell": false
+ },
+ "H3_p99_CBWFQ": {
+  "n": 323,
+  "cells": 19,
+  "a": 0.2712527771531022,
+  "b": 7.0071473971809946,
+  "c": 2.391771292226376,
+  "R2": 0.9946864857038552,
+  "a_ci_within": [
+   0.2512709858952834,
+   0.29166565921298426
+  ],
+  "b_ci_within": [
+   6.97736203393121,
+   7.036846305747893
+  ],
+  "c_ci_within": [
+   2.073475086585364,
+   2.7039923279761493
+  ],
+  "a_ci_cluster": [
+   0.10331798636628121,
+   0.3495795244629201
+  ],
+  "b_ci_cluster": [
+   6.818732426066122,
+   7.180767570238349
+  ],
+  "c_ci_cluster": [
+   0.7920430571915108,
+   4.1898698670272445
+  ],
+  "ref_a": 1.0,
+  "ref_b": 2.0,
+  "ref_a_in_cluster_ci": false,
+  "ref_b_in_cluster_ci": false,
+  "lack_of_fit_F": 48.726516166654356,
+  "lack_of_fit_df": [
+   16,
+   304
+  ],
+  "lack_of_fit_p": 0.0
+ }
+}

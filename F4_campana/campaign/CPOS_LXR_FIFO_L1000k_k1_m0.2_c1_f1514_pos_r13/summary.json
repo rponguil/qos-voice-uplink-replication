@@ -1,0 +1,49 @@
+{
+ "name": "CPOS_LXR_FIFO_L1000k_k1_m0.2_c1_f1514_pos_r13",
+ "policy": "FIFO",
+ "rate": 950000,
+ "iou_cpu": 0.020845281968681486,
+ "probe0": {
+  "n": 1999,
+  "min": 1.855361,
+  "p50": 1.924365,
+  "p95": 12.584963,
+  "p99": 13.774378,
+  "max": 14.032586,
+  "mean": 4.365615802901451,
+  "jitter3550": 6.213620533710688,
+  "sent": 3000,
+  "recv": 3000,
+  "loss": 0.0
+ },
+ "probe1": {
+  "n": 1322,
+  "min": 12.261939,
+  "p50": 12.3153,
+  "p95": 12.911756,
+  "p99": 13.777659,
+  "max": 13.994375,
+  "mean": 12.384677823751892,
+  "jitter3550": 0.07615270285199113,
+  "sent": 1984,
+  "recv": 1984,
+  "loss": 0.0
+ },
+ "modem": {
+  "sent_bytes": 3645902,
+  "sent_pkts": 4987,
+  "drops": 0,
+  "overlimits": 0,
+  "backlog_max_bytes": 1728,
+  "backlog_frac_gt_mtu_bytes": 0.11726006191950464,
+  "backlog_samples": 2584,
+  "backlog_max_pkts": 2,
+  "backlog_frac_gt1": 0.11726006191950464
+ },
+ "router": {
+  "sent_bytes": 3645902,
+  "sent_pkts": 4987,
+  "drops": 0,
+  "overlimits": 213
+ }
+}

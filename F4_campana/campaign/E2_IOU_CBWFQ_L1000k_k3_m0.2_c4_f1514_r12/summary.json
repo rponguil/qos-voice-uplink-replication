@@ -1,0 +1,150 @@
+{
+ "name": "E2_IOU_CBWFQ_L1000k_k3_m0.2_c4_f1514_r12",
+ "policy": "CBWFQ",
+ "rate": 950000,
+ "iou_cpu": 0.03387443147653257,
+ "probe0": {
+  "n": 2000,
+  "min": 1.888974,
+  "p50": 13.256419,
+  "p95": 29.697609,
+  "p99": 37.00086,
+  "max": 45.475985,
+  "mean": 14.4661827225,
+  "jitter3550": 9.38482124715463,
+  "sent": 3000,
+  "recv": 3000,
+  "loss": 0.0
+ },
+ "probe1": {
+  "n": 1999,
+  "min": 1.890443,
+  "p50": 14.026713,
+  "p95": 31.153678,
+  "p99": 37.04364,
+  "max": 46.084763,
+  "mean": 15.136660990995498,
+  "jitter3550": 10.882429173102775,
+  "sent": 3000,
+  "recv": 3000,
+  "loss": 0.0
+ },
+ "probe2": {
+  "n": 1999,
+  "min": 2.113519,
+  "p50": 16.259253,
+  "p95": 34.245934,
+  "p99": 40.655004,
+  "max": 46.329612,
+  "mean": 17.637396186593296,
+  "jitter3550": 10.565416544362677,
+  "sent": 3000,
+  "recv": 3000,
+  "loss": 0.0
+ },
+ "probe3": {
+  "n": 1999,
+  "min": 1.885203,
+  "p50": 15.085609,
+  "p95": 32.742988,
+  "p99": 41.27324,
+  "max": 51.013628,
+  "mean": 16.516882936968486,
+  "jitter3550": 11.211809634874317,
+  "sent": 3000,
+  "recv": 3000,
+  "loss": 0.0
+ },
+ "probe4": {
+  "n": 207,
+  "min": 1884.6284,
+  "p50": 3377.231254,
+  "p95": 3457.321512,
+  "p99": 3467.445693,
+  "max": 3472.484151,
+  "mean": 3344.3076904589375,
+  "jitter3550": 76.88428707295373,
+  "sent": 4076,
+  "recv": 328,
+  "loss": 0.9195289499509323
+ },
+ "tcp5": {
+  "rx_bps_total": 61678.86725913685,
+  "rx_bps_steady": 59748.976813024216,
+  "rx_l2_bps_steady": null,
+  "lost": null,
+  "pkts": null,
+  "tcp_hambre": false
+ },
+ "probe6": {
+  "n": 1287,
+  "min": 1337.100436,
+  "p50": 2023.011646,
+  "p95": 2058.700152,
+  "p99": 2071.593615,
+  "max": 2079.704069,
+  "mean": 2007.756883978244,
+  "jitter3550": 20.370753873812955,
+  "sent": 4500,
+  "recv": 1993,
+  "loss": 0.5571111111111111
+ },
+ "tcp7": {
+  "rx_bps_total": 193890.89893386912,
+  "rx_bps_steady": 198451.03046750944,
+  "rx_l2_bps_steady": null,
+  "lost": null,
+  "pkts": null,
+  "tcp_hambre": false
+ },
+ "modem": {
+  "sent_bytes": 7362723,
+  "sent_pkts": 15836,
+  "drops": 0,
+  "overlimits": 0,
+  "backlog_max_bytes": 3598,
+  "backlog_frac_gt_mtu_bytes": 0.36104605776736926,
+  "backlog_samples": 2562,
+  "backlog_max_pkts": 9,
+  "backlog_frac_gt1": 0.7170179547228728
+ },
+ "router": {
+  "if_out_drops": 6410,
+  "if_out_pkts": 15835,
+  "class-default": {
+   "pkts": 22245,
+   "bytes": 15882723,
+   "out_pkts": 15835,
+   "drops": 6410,
+   "exceed_drops": null
+  },
+  "CM-VOZ": {
+   "pkts": 12000,
+   "bytes": 2568000,
+   "out_pkts": 12000,
+   "drops": 0,
+   "exceed_drops": null
+  },
+  "CM-VIDEO": {
+   "pkts": 4500,
+   "bytes": 4689000,
+   "out_pkts": 1993,
+   "drops": 2507,
+   "exceed_drops": null
+  },
+  "CM-DATOS": {
+   "pkts": 1236,
+   "bytes": 1869856,
+   "out_pkts": 1127,
+   "drops": 109,
+   "exceed_drops": null
+  },
+  "class-default#2": {
+   "pkts": 4509,
+   "bytes": 6755867,
+   "out_pkts": 715,
+   "drops": 3794,
+   "exceed_drops": null
+  }
+ }
+}

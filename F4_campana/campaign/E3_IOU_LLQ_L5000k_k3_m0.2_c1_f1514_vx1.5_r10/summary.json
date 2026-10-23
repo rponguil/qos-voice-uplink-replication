@@ -1,0 +1,128 @@
+{
+ "name": "E3_IOU_LLQ_L5000k_k3_m0.2_c1_f1514_vx1.5_r10",
+ "policy": "LLQ",
+ "rate": 4750000,
+ "iou_cpu": 0.05818400174965248,
+ "probe0": {
+  "n": 1433,
+  "min": 0.50216,
+  "p50": 2.363925,
+  "p95": 4.254045,
+  "p99": 5.124618,
+  "max": 22.466048,
+  "mean": 2.44918682205164,
+  "jitter3550": 1.1408408338228913,
+  "sent": 3000,
+  "recv": 2163,
+  "loss": 0.279
+ },
+ "probe1": {
+  "n": 964,
+  "min": 0.503557,
+  "p50": 2.386064,
+  "p95": 4.127631,
+  "p99": 5.080339,
+  "max": 22.901299,
+  "mean": 2.449324419087137,
+  "jitter3550": 0.9510629981744313,
+  "sent": 2400,
+  "recv": 1445,
+  "loss": 0.3979166666666667
+ },
+ "probe2": {
+  "n": 4126,
+  "min": 161.397711,
+  "p50": 170.419837,
+  "p95": 175.139021,
+  "p99": 204.157531,
+  "max": 223.423932,
+  "mean": 171.010330678381,
+  "jitter3550": 3.1008974663790205,
+  "sent": 20380,
+  "recv": 6216,
+  "loss": 0.6949950932286555
+ },
+ "tcp3": {
+  "rx_bps_total": 1201744.4212603623,
+  "rx_bps_steady": 1194675.8713502684,
+  "rx_l2_bps_steady": null,
+  "lost": null,
+  "pkts": null,
+  "tcp_hambre": false
+ },
+ "probe4": {
+  "n": 5677,
+  "min": 443.175318,
+  "p50": 457.854944,
+  "p95": 465.646187,
+  "p99": 544.790897,
+  "max": 583.007105,
+  "mean": 459.75270922194824,
+  "jitter3550": 4.600302591905235,
+  "sent": 22497,
+  "recv": 8592,
+  "loss": 0.6180824109881318
+ },
+ "tcp5": {
+  "rx_bps_total": 906835.5100870928,
+  "rx_bps_steady": 895007.5219965327,
+  "rx_l2_bps_steady": null,
+  "lost": null,
+  "pkts": null,
+  "tcp_hambre": false
+ },
+ "modem": {
+  "sent_bytes": 35780515,
+  "sent_pkts": 29451,
+  "drops": 0,
+  "overlimits": 0,
+  "backlog_max_bytes": 3812,
+  "backlog_frac_gt_mtu_bytes": 0.39821981424148606,
+  "backlog_samples": 2584,
+  "backlog_max_pkts": 4,
+  "backlog_frac_gt1": 0.41911764705882354
+ },
+ "router": {
+  "if_out_drops": 29997,
+  "if_out_pkts": 29450,
+  "class-default": {
+   "pkts": 59447,
+   "bytes": 72303225,
+   "out_pkts": 29450,
+   "drops": 29997,
+   "exceed_drops": null
+  },
+  "CM-VOZ": {
+   "pkts": 5400,
+   "bytes": 1155600,
+   "out_pkts": null,
+   "drops": null,
+   "exceed_drops": 1792
+  },
+  "CM-VIDEO": {
+   "pkts": 22497,
+   "bytes": 23441874,
+   "out_pkts": 8592,
+   "drops": 13905,
+   "exceed_drops": null
+  },
+  "CM-DATOS": {
+   "pkts": 4833,
+   "bytes": 7317162,
+   "out_pkts": 4752,
+   "drops": 81,
+   "exceed_drops": null
+  },
+  "class-default#2": {
+   "pkts": 26717,
+   "bytes": 40388589,
+   "out_pkts": 12498,
+   "drops": 14219,
+   "exceed_drops": null
+  },
+  "PRIORITY_Q": {
+   "drops": 0,
+   "out_pkts": 3608
+  }
+ }
+}

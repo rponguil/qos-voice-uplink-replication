@@ -1,0 +1,41 @@
+{
+ "name": "FLOOR_IOU_FIFO_L3000k_k0_m0.2_c1_f1514_floor_r07",
+ "policy": "FIFO",
+ "rate": 2850000,
+ "iou_cpu": 0.017455622906809475,
+ "probe0": {
+  "n": 1750,
+  "min": 0.758698,
+  "p50": 0.826794,
+  "p95": 0.883646,
+  "p99": 0.920663,
+  "max": 4.090459,
+  "mean": 0.8330924599999999,
+  "jitter3550": 0.025640322311633632,
+  "sent": 2000,
+  "recv": 2000,
+  "loss": 0.0
+ },
+ "modem": {
+  "sent_bytes": 428084,
+  "sent_pkts": 2002,
+  "drops": 0,
+  "overlimits": 0,
+  "backlog_max_bytes": 214,
+  "backlog_frac_gt_mtu_bytes": 0.0,
+  "backlog_samples": 1757,
+  "backlog_max_pkts": 1,
+  "backlog_frac_gt1": 0.0
+ },
+ "router": {
+  "if_out_drops": 0,
+  "if_out_pkts": 2001,
+  "class-default": {
+   "pkts": 2001,
+   "bytes": 428077,
+   "out_pkts": 2001,
+   "drops": 0,
+   "exceed_drops": null
+  }
+ }
+}

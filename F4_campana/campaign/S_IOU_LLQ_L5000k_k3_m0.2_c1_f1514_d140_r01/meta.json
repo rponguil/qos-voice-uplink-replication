@@ -1,0 +1,212 @@
+{
+ "name": "S_IOU_LLQ_L5000k_k3_m0.2_c1_f1514_d140_r01",
+ "policy": "LLQ",
+ "rate_bps": 4750000,
+ "duration": 140,
+ "queue_limit": 64,
+ "voice_pct": 30,
+ "platform": "IOU",
+ "line_bps": 5000000,
+ "bc_bits": 19000,
+ "flows": [
+  {
+   "kind": "probe",
+   "node": "CW-VOZ",
+   "port": 5001,
+   "dscp": 46,
+   "size": 172,
+   "interval": 0.02,
+   "flow": 100
+  },
+  {
+   "kind": "probe",
+   "node": "RES-1",
+   "port": 5201,
+   "dscp": 0,
+   "size": 1472,
+   "interval": 0.002944,
+   "flow": 4
+  },
+  {
+   "kind": "tcp",
+   "node": "RES-1",
+   "port": 5301,
+   "dscp": 0,
+   "streams": 1,
+   "mss": null
+  },
+  {
+   "kind": "probe",
+   "node": "CW-DAT",
+   "port": 5101,
+   "dscp": 34,
+   "size": 1000,
+   "interval": 0.002667,
+   "flow": 2
+  },
+  {
+   "kind": "tcp",
+   "node": "CW-DAT",
+   "port": 5302,
+   "dscp": 18,
+   "streams": 1,
+   "mss": null
+  }
+ ],
+ "t_start": "2026-10-12T02:26:27",
+ "stagger_s": 0.0,
+ "iperf_stuck_at_cap": {},
+ "iperf_wait_left_s": 59.9,
+ "host_power": {
+  "governor": "performance",
+  "idle_disabled": [
+   "0",
+   "0",
+   "1",
+   "1"
+  ]
+ },
+ "loadavg_start": [
+  0.27392578125,
+  0.302734375,
+  0.40869140625
+ ],
+ "loadavg_end": [
+  0.458984375,
+  0.33837890625,
+  0.4013671875
+ ],
+ "iou_cpu_frac": 0.060625774490835595,
+ "timing_s": {
+  "t0": 0.0,
+  "config_done": 18.4,
+  "flows_started": 21.8,
+  "drained": 168.1,
+  "fetched": 172.1
+ },
+ "cell": {
+  "exp": "S",
+  "platform": "IOU",
+  "policy": "LLQ",
+  "L": 5000000,
+  "k": 3,
+  "m": 0.2,
+  "calls": 1,
+  "frame": 1514,
+  "marked": true,
+  "floor": false,
+  "Q": 64,
+  "reps": 17,
+  "dur": 140,
+  "r_frac": 0.95,
+  "be_eq_bc": false,
+  "htb_burst": null,
+  "cs1_data": false,
+  "host_load": false,
+  "voice_over": null,
+  "positive": false,
+  "custom": null,
+  "id": "S_IOU_LLQ_L5000k_k3_m0.2_c1_f1514_d140",
+  "warmup": 20
+ },
+ "rep": 1,
+ "seed_info": {
+  "seed": 20261012,
+  "script_sha256_16": {
+   "campaign.py": "d56d4ee73bb0e436",
+   "runner.py": "aca54aec752410d9",
+   "f2lib.py": "aedaea85cb7dfe3c",
+   "modem_backlog.sh": "638fabd8008efa9c",
+   "udpprobe.py": "c0ef468e0efd2f7c"
+  },
+  "image": "sha256:98d8be25f2e4d0e9f12ff88ea1e54c512bc5883ad23091effc20ab32c7d628ec",
+  "protocol_sha256": "c84b7f584a29fad92d905746494c9005860a948e52f89df8ced7853e798e2f8f"
+ },
+ "reservations": {
+  "B_v_kbps": 103,
+  "B_vid_kbps": 1188,
+  "B_dat_kbps": 950
+ },
+ "R": 4750000,
+ "htb_burst_B": null,
+ "wall_s": 173.8,
+ "router_health": {
+  "pre": {
+   "ignored": 65,
+   "per_interface": {
+    "Ethernet0/0_overrun": 0,
+    "Ethernet0/0_input_errors": 29,
+    "Ethernet0/0": 29,
+    "Ethernet0/2_overrun": 0,
+    "Ethernet0/2_input_errors": 36,
+    "Ethernet0/2": 36
+   },
+   "buffer_failures": 0
+  },
+  "post": {
+   "ignored": 70,
+   "per_interface": {
+    "Ethernet0/0_overrun": 0,
+    "Ethernet0/0_input_errors": 34,
+    "Ethernet0/0": 34,
+    "Ethernet0/2_overrun": 0,
+    "Ethernet0/2_input_errors": 36,
+    "Ethernet0/2": 36
+   },
+   "buffer_failures": 0
+  }
+ },
+ "ingress_loss_delta": {
+  "Ethernet0/0_overrun": 0,
+  "Ethernet0/0_input_errors": 5,
+  "Ethernet0/0": 5,
+  "Ethernet0/2_overrun": 0,
+  "Ethernet0/2_input_errors": 0,
+  "Ethernet0/2": 0,
+  "ignored_total": 5,
+  "buffer_failures": 0
+ },
+ "marcada": true,
+ "tcp_hambre": [],
+ "accounting": {
+  "sent_udp": 107047,
+  "sent_tcp_cap": 25908,
+  "router_total": 132955
+ },
+ "per_class": {
+  "sent": {
+   "voz": 7000,
+   "default": 62244,
+   "video": 52493,
+   "datos": 11218
+  },
+  "classified": {
+   "voz": 7000,
+   "video": 52492,
+   "datos": 11214,
+   "default": 62249
+  },
+  "received_at_sink": {
+   "voz": 7000,
+   "default": 29102,
+   "video": 20017,
+   "datos": 11049
+  }
+ },
+ "shaper_rate_bps": 4737679,
+ "shaper_err": -0.0026,
+ "voice_owd_capture_path": {
+  "n": 5999,
+  "p50": 2.4728775024414062,
+  "p99": 4.899024963378906,
+  "sent_cap": 7000,
+  "recv_cap": 7000
+ },
+ "load1": 0.46826171875,
+ "prerun_s": {
+  "c7200_stop": 0.0,
+  "cool_down": 0.0,
+  "c7200_boot": 0.0
+ },
+ "invalid_reasons": []
+}

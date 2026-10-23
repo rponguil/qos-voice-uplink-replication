@@ -1,0 +1,184 @@
+CONFIRMATORY RESULTS (analysis plan v2), tables only. Times in ms. p_holm within family.
+
+H1 (E1 IOU k=1; d = p99 CBWFQ - p99 LLQ; TOST +-EMI)
+  E1 L=500k k=1    n=17 mean d  +21.233 [90% +20.633,+21.834] median  +20.965 margin 3.02 p_tost 1 p_holm 1 equiv False | p99 CBWFQ 52.08 LLQ 31.43 bound 31.44
+  E1 L=1000k k=1   n=17 mean d  +38.416 [90% +37.911,+38.921] median  +38.377 margin 2.00 p_tost 1 p_holm 1 equiv False | p99 CBWFQ 57.02 LLQ 18.65 bound 15.89
+  E1 L=2000k k=1   n=17 mean d  +54.256 [90% +54.028,+54.485] median  +54.301 margin 2.00 p_tost 1 p_holm 1 equiv False | p99 CBWFQ 65.44 LLQ 11.14 bound 8.12 [exempt cell]
+  E1 L=3000k k=1   n=17 mean d  +63.211 [90% +62.860,+63.561] median  +62.970 margin 2.00 p_tost 1 p_holm 1 equiv False | p99 CBWFQ 70.59 LLQ 7.46 bound 5.54 [exempt cell]
+  E1 L=5000k k=1   n=17 mean d  +59.251 [90% +59.127,+59.375] median  +59.207 margin 2.00 p_tost 1 p_holm 1 equiv False | p99 CBWFQ 64.55 LLQ 5.32 bound 3.46
+
+Negative control (unmarked; d = CBWFQ - LLQ; TOST +-EMI)
+  CNEG k=1  CNEG L=500k k=1    mean d   +0.337 [90% -0.397,+1.071] p_tost 4.543e-06 p_holm 9.085e-06 equiv True
+  CNEG k=1  CNEG L=1000k k=1   mean d   +0.272 [90% +0.108,+0.436] p_tost 1.722e-12 p_holm 6.889e-12 equiv True
+  CNEG k=1  CNEG L=2000k k=1   mean d   -8.892 [90% -24.585,+6.801] p_tost 0.7728 p_holm 0.7728 equiv False
+  CNEG k=1  CNEG L=3000k k=1   mean d   +0.523 [90% +0.369,+0.678] p_tost 7.748e-12 p_holm 2.324e-11 equiv True
+  CNEG k=1  CNEG L=5000k k=1   mean d   +0.081 [90% -0.048,+0.211] p_tost 8.378e-15 p_holm 4.189e-14 equiv True
+  CNEG k=3  CNEG L=500k k=3    mean d  +35.684 [90% -4.592,+75.960] p_tost 0.912 p_holm 1 equiv False
+  CNEG k=3  CNEG L=1000k k=3   mean d   +2.621 [90% +1.884,+3.358] p_tost 0.9197 p_holm 1 equiv False
+  CNEG k=3  CNEG L=2000k k=3   mean d  +22.878 [90% -17.572,+63.329] p_tost 0.8096 p_holm 1 equiv False
+  CNEG k=3  CNEG L=3000k k=3   mean d  -27.233 [90% -60.226,+5.759] p_tost 0.8998 p_holm 1 equiv False
+  CNEG k=3  CNEG L=5000k k=3   mean d   -0.006 [90% -0.189,+0.176] p_tost 1.01e-12 p_holm 5.052e-12 equiv True
+
+H2 (Delta = p99 CBWFQ - p99 LLQ; exact sign permutation, one-sided; Wilcoxon check)
+  H2 E1 k=2 E1 L=1000k k=2                     median Delta    80.00 [95% 79.82,81.11] Cliff +1.00 p_perm 7.63e-06 p_holm 3.81e-05 (Wilcoxon holm 3.81e-05) Delta>0 True
+  H2 E1 k=2 E1 L=2000k k=2                     median Delta    84.76 [95% 84.08,85.90] Cliff +1.00 p_perm 7.63e-06 p_holm 3.81e-05 (Wilcoxon holm 3.81e-05) Delta>0 True
+  H2 E1 k=2 E1 L=3000k k=2                     median Delta    91.86 [95% 90.98,91.97] Cliff +1.00 p_perm 7.63e-06 p_holm 3.81e-05 (Wilcoxon holm 3.81e-05) Delta>0 True
+  H2 E1 k=2 E1 L=5000k k=2                     median Delta    89.82 [95% 89.46,90.03] Cliff +1.00 p_perm 7.63e-06 p_holm 3.81e-05 (Wilcoxon holm 3.81e-05) Delta>0 True
+  H2 E1 k=2 E1 L=500k k=2                      median Delta    75.68 [95% 75.27,75.89] Cliff +1.00 p_perm 7.63e-06 p_holm 3.81e-05 (Wilcoxon holm 3.81e-05) Delta>0 True
+  H2 E1 k=3 E1 L=1000k k=3                     median Delta   103.31 [95% 102.07,104.06] Cliff +1.00 p_perm 7.63e-06 p_holm 3.81e-05 (Wilcoxon holm 3.81e-05) Delta>0 True
+  H2 E1 k=3 E1 L=2000k k=3                     median Delta   110.34 [95% 109.93,111.69] Cliff +1.00 p_perm 7.63e-06 p_holm 3.81e-05 (Wilcoxon holm 3.81e-05) Delta>0 True
+  H2 E1 k=3 E1 L=3000k k=3                     median Delta   116.96 [95% 115.24,117.44] Cliff +1.00 p_perm 7.63e-06 p_holm 3.81e-05 (Wilcoxon holm 3.81e-05) Delta>0 True
+  H2 E1 k=3 E1 L=5000k k=3                     median Delta   114.15 [95% 113.02,115.06] Cliff +1.00 p_perm 7.63e-06 p_holm 3.81e-05 (Wilcoxon holm 3.81e-05) Delta>0 True
+  H2 E1 k=3 E1 L=500k k=3                      median Delta    97.00 [95% 95.58,97.75] Cliff +1.00 p_perm 7.63e-06 p_holm 3.81e-05 (Wilcoxon holm 3.81e-05) Delta>0 True
+  H2 E2 k=3 E2 L=1000k k=3                     median Delta   103.05 [95% 101.19,104.39] Cliff +1.00 p_perm 7.63e-06 p_holm 7.63e-05 (Wilcoxon holm 7.63e-05) Delta>0 True
+  H2 E2 k=3 E2 L=1000k k=3 calls=4             median Delta    24.25 [95% 22.43,24.84] Cliff +1.00 p_perm 7.63e-06 p_holm 7.63e-05 (Wilcoxon holm 7.63e-05) Delta>0 True
+  H2 E2 k=3 E2 L=1000k k=3 frame=590           median Delta   105.92 [95% 105.15,106.29] Cliff +1.00 p_perm 7.63e-06 p_holm 7.63e-05 (Wilcoxon holm 7.63e-05) Delta>0 True
+  H2 E2 k=3 E2 L=1000k k=3 frame=590 calls=4   median Delta    29.28 [95% 28.29,30.42] Cliff +1.00 p_perm 7.63e-06 p_holm 7.63e-05 (Wilcoxon holm 7.63e-05) Delta>0 True
+  H2 E2 k=3 E2 L=5000k k=3                     median Delta   114.20 [95% 113.23,114.88] Cliff +1.00 p_perm 7.63e-06 p_holm 7.63e-05 (Wilcoxon holm 7.63e-05) Delta>0 True
+  H2 E2 k=3 E2 L=5000k k=3 calls=4             median Delta    27.42 [95% 26.84,32.28] Cliff +1.00 p_perm 7.63e-06 p_holm 7.63e-05 (Wilcoxon holm 7.63e-05) Delta>0 True
+  H2 E2 k=3 E2 L=5000k k=3 frame=590           median Delta   113.57 [95% 113.24,114.18] Cliff +1.00 p_perm 7.63e-06 p_holm 7.63e-05 (Wilcoxon holm 7.63e-05) Delta>0 True
+  H2 E2 k=3 E2 L=5000k k=3 frame=590 calls=4   median Delta    29.30 [95% 27.69,35.01] Cliff +1.00 p_perm 7.63e-06 p_holm 7.63e-05 (Wilcoxon holm 7.63e-05) Delta>0 True
+  H2 E2 k=3 E2 L=500k k=3                      median Delta    96.90 [95% 96.24,97.32] Cliff +1.00 p_perm 7.63e-06 p_holm 7.63e-05 (Wilcoxon holm 7.63e-05) Delta>0 True
+  H2 E2 k=3 E2 L=500k k=3 frame=590            median Delta   105.61 [95% 103.05,106.76] Cliff +1.00 p_perm 7.63e-06 p_holm 7.63e-05 (Wilcoxon holm 7.63e-05) Delta>0 True
+
+H3 (k=3, E1+E1-R, 19 cells; OLS; CI within cells / cluster)
+  p99_CBWFQ: a=0.271 within[0.251,0.292] cluster[0.103,0.350] (ref 1.0, in cluster CI: False); b=7.007 within[6.977,7.037] cluster[6.819,7.181] (ref 2.0, in cluster CI: False); c=2.392; R2=0.995; lack-of-fit F(16,304)=48.73 p=0
+  Delta: a=-0.890 within[-0.916,-0.864] cluster[-1.198,-0.796] (ref 0.0, in cluster CI: False); b=7.014 within[6.981,7.046] cluster[6.785,7.211] (ref 2.0, in cluster CI: False); c=-0.601; R2=0.993; lack-of-fit F(16,304)=53.27 p=0
+  residuals per cell: results/H3_residuos.csv
+
+H4 (d = p99 X - p99 LLQ; TOST +-EMI decides 'comparable'; sign permutation two-sided descriptive)
+  H4 E1 k=1 CAKE E1 L=1000k k=1                     median d    -4.12 mean    -4.17 p_tost 1 p_holm 1 comparable False | p_perm2 1.53e-05
+  H4 E1 k=1 CAKE E1 L=2000k k=1                     median d    -3.81 mean    -3.78 p_tost 1 p_holm 1 comparable False | p_perm2 1.53e-05
+  H4 E1 k=1 CAKE E1 L=3000k k=1                     median d    -2.52 mean    -2.49 p_tost 1 p_holm 1 comparable False | p_perm2 1.53e-05
+  H4 E1 k=1 CAKE E1 L=5000k k=1                     median d    -2.29 mean    -2.28 p_tost 1 p_holm 1 comparable False | p_perm2 1.53e-05
+  H4 E1 k=1 CAKE E1 L=500k k=1                      median d    -2.60 mean    -2.21 p_tost 0.00108 p_holm 0.0108 comparable True | p_perm2 1.53e-05
+  H4 E1 k=1 FQC  E1 L=1000k k=1                     median d    -3.77 mean    -3.61 p_tost 1 p_holm 1 comparable False | p_perm2 1.53e-05
+  H4 E1 k=1 FQC  E1 L=2000k k=1                     median d    -1.81 mean    -1.84 p_tost 0.192 p_holm 1 comparable False | p_perm2 1.53e-05
+  H4 E1 k=1 FQC  E1 L=3000k k=1                     median d    -2.51 mean    -2.49 p_tost 1 p_holm 1 comparable False | p_perm2 1.53e-05
+  H4 E1 k=1 FQC  E1 L=5000k k=1                     median d    -2.28 mean    -2.27 p_tost 1 p_holm 1 comparable False | p_perm2 1.53e-05
+  H4 E1 k=1 FQC  E1 L=500k k=1                      median d    +7.09 mean    +4.82 p_tost 0.882 p_holm 1 comparable False | p_perm2 0.00618
+  H4 E1 k=2 CAKE E1 L=1000k k=2                     median d    -3.78 mean    -3.61 p_tost 1 p_holm 1 comparable False | p_perm2 1.53e-05
+  H4 E1 k=2 CAKE E1 L=2000k k=2                     median d    -3.41 mean    -3.31 p_tost 1 p_holm 1 comparable False | p_perm2 1.53e-05
+  H4 E1 k=2 CAKE E1 L=3000k k=2                     median d    -2.41 mean    -2.39 p_tost 1 p_holm 1 comparable False | p_perm2 1.53e-05
+  H4 E1 k=2 CAKE E1 L=5000k k=2                     median d    -1.84 mean    -1.80 p_tost 5.66e-05 p_holm 0.000453 comparable True | p_perm2 1.53e-05
+  H4 E1 k=2 CAKE E1 L=500k k=2                      median d    -0.45 mean    -0.72 p_tost 9.53e-08 p_holm 9.53e-07 comparable True | p_perm2 0.00887
+  H4 E1 k=2 FQC  E1 L=1000k k=2                     median d    +7.84 mean    +7.94 p_tost 1 p_holm 1 comparable False | p_perm2 1.53e-05
+  H4 E1 k=2 FQC  E1 L=2000k k=2                     median d    -3.24 mean    -3.19 p_tost 1 p_holm 1 comparable False | p_perm2 1.53e-05
+  H4 E1 k=2 FQC  E1 L=3000k k=2                     median d    -2.34 mean    -2.32 p_tost 1 p_holm 1 comparable False | p_perm2 1.53e-05
+  H4 E1 k=2 FQC  E1 L=5000k k=2                     median d    -1.83 mean    -1.78 p_tost 1.56e-05 p_holm 0.000141 comparable True | p_perm2 1.53e-05
+  H4 E1 k=2 FQC  E1 L=500k k=2                      median d   +39.29 mean   +38.87 p_tost 1 p_holm 1 comparable False | p_perm2 1.53e-05
+  H4 E1 k=3 CAKE E1 L=1000k k=3                     median d    -3.57 mean    -3.68 p_tost 1 p_holm 1 comparable False | p_perm2 1.53e-05
+  H4 E1 k=3 CAKE E1 L=2000k k=3                     median d    -3.31 mean    -3.39 p_tost 1 p_holm 1 comparable False | p_perm2 1.53e-05
+  H4 E1 k=3 CAKE E1 L=3000k k=3                     median d    -2.47 mean    -2.46 p_tost 1 p_holm 1 comparable False | p_perm2 1.53e-05
+  H4 E1 k=3 CAKE E1 L=5000k k=3                     median d    -1.84 mean    -1.83 p_tost 0.0073 p_holm 0.0511 comparable False | p_perm2 1.53e-05
+  H4 E1 k=3 CAKE E1 L=500k k=3                      median d    -1.57 mean    -1.69 p_tost 4.77e-05 p_holm 0.00043 comparable True | p_perm2 4.58e-05
+  H4 E1 k=3 FQC  E1 L=1000k k=3                     median d   +20.09 mean   +20.11 p_tost 1 p_holm 1 comparable False | p_perm2 1.53e-05
+  H4 E1 k=3 FQC  E1 L=2000k k=3                     median d    -0.40 mean    -0.26 p_tost 1.73e-08 p_holm 1.73e-07 comparable True | p_perm2 0.16
+  H4 E1 k=3 FQC  E1 L=3000k k=3                     median d    -2.39 mean    -2.24 p_tost 0.999 p_holm 1 comparable False | p_perm2 1.53e-05
+  H4 E1 k=3 FQC  E1 L=5000k k=3                     median d    -1.66 mean    -1.72 p_tost 0.00017 p_holm 0.00136 comparable True | p_perm2 1.53e-05
+  H4 E1 k=3 FQC  E1 L=500k k=3                      median d   +59.68 mean   +59.95 p_tost 1 p_holm 1 comparable False | p_perm2 1.53e-05
+  H4 E2 k=3 CAKE E2 L=1000k k=3                     median d    -3.59 mean    -3.59 p_tost 1 p_holm 1 comparable False | p_perm2 1.53e-05
+  H4 E2 k=3 CAKE E2 L=1000k k=3 calls=4             median d  +190.84 mean  +191.51 p_tost 1 p_holm 1 comparable False | p_perm2 1.53e-05
+  H4 E2 k=3 CAKE E2 L=1000k k=3 frame=590           median d    -3.25 mean    -3.02 p_tost 1 p_holm 1 comparable False | p_perm2 1.53e-05
+  H4 E2 k=3 CAKE E2 L=1000k k=3 frame=590 calls=4   median d  +193.43 mean  +193.73 p_tost 1 p_holm 1 comparable False | p_perm2 1.53e-05
+  H4 E2 k=3 CAKE E2 L=5000k k=3                     median d    -1.83 mean    -1.82 p_tost 0.00228 p_holm 0.0296 comparable True | p_perm2 1.53e-05
+  H4 E2 k=3 CAKE E2 L=5000k k=3 calls=4             median d    -1.71 mean    -1.73 p_tost 0.000425 p_holm 0.00594 comparable True | p_perm2 1.53e-05
+  H4 E2 k=3 CAKE E2 L=5000k k=3 frame=590           median d    -1.26 mean    -1.30 p_tost 5.18e-07 p_holm 9.33e-06 comparable True | p_perm2 1.53e-05
+  H4 E2 k=3 CAKE E2 L=5000k k=3 frame=590 calls=4   median d    -0.90 mean    -0.91 p_tost 4.18e-09 p_holm 8.36e-08 comparable True | p_perm2 1.53e-05
+  H4 E2 k=3 CAKE E2 L=500k k=3                      median d    -1.35 mean    -1.23 p_tost 4.08e-06 p_holm 6.94e-05 comparable True | p_perm2 0.000839
+  H4 E2 k=3 CAKE E2 L=500k k=3 frame=590            median d    -3.73 mean    -3.75 p_tost 0.97 p_holm 1 comparable False | p_perm2 1.53e-05
+  H4 E2 k=3 FQC  E2 L=1000k k=3                     median d   +19.11 mean   +19.36 p_tost 1 p_holm 1 comparable False | p_perm2 1.53e-05
+  H4 E2 k=3 FQC  E2 L=1000k k=3 calls=4             median d   +38.33 mean   +38.96 p_tost 1 p_holm 1 comparable False | p_perm2 1.53e-05
+  H4 E2 k=3 FQC  E2 L=1000k k=3 frame=590           median d   +34.63 mean   +34.74 p_tost 1 p_holm 1 comparable False | p_perm2 1.53e-05
+  H4 E2 k=3 FQC  E2 L=1000k k=3 frame=590 calls=4   median d   +55.33 mean   +57.48 p_tost 1 p_holm 1 comparable False | p_perm2 1.53e-05
+  H4 E2 k=3 FQC  E2 L=5000k k=3                     median d    -1.78 mean    -1.75 p_tost 0.000381 p_holm 0.00571 comparable True | p_perm2 1.53e-05
+  H4 E2 k=3 FQC  E2 L=5000k k=3 calls=4             median d    -1.56 mean    -1.58 p_tost 8.29e-06 p_holm 0.000133 comparable True | p_perm2 1.53e-05
+  H4 E2 k=3 FQC  E2 L=5000k k=3 frame=590           median d    -0.24 mean  +206.80 p_tost 0.831 p_holm 1 comparable False | p_perm2 0.994
+  H4 E2 k=3 FQC  E2 L=5000k k=3 frame=590 calls=4   median d    -0.85 mean    -0.63 p_tost 5.74e-08 p_holm 1.09e-06 comparable True | p_perm2 0.00154
+  H4 E2 k=3 FQC  E2 L=500k k=3                      median d   +59.39 mean   +60.00 p_tost 1 p_holm 1 comparable False | p_perm2 1.53e-05
+  H4 E2 k=3 FQC  E2 L=500k k=3 frame=590            median d   +77.47 mean   +78.30 p_tost 1 p_holm 1 comparable False | p_perm2 1.53e-05
+  excess over own-platform floor, FQC active flows, CAKE voice share: results/H4_suelo.csv
+
+H5 (E3; ln(goodput LLQ / CBWFQ); TOST [ln .95, ln 1.05]; zero goodput or hambre -> pair out, >2 -> not evaluable)
+  L=1000k data pairs 17 starved 0 ratio 0.9701 [90% 0.9613,0.9791] p_tost 0.000531 p_holm 0.000531 equiv True
+  L=1000k res  pairs 17 starved 0 ratio 1.0035 [90% 0.9982,1.0087] p_tost 3.24e-11 p_holm 6.48e-11 equiv True
+  L=5000k data pairs 17 starved 0 ratio 1.0009 [90% 0.9969,1.0049] p_tost 2.67e-13 p_holm 8.01e-13 equiv True
+  L=5000k res  pairs 17 starved 0 ratio 1.0009 [90% 0.9992,1.0027] p_tost 4.81e-19 p_holm 1.92e-18 equiv True
+  voice 1.5xB_v (descriptive) L=1000k data ratio 0.9960 95% (0.9815909548269353, 1.0106460160636443)
+  voice 1.5xB_v (descriptive) L=1000k res  ratio 0.9965 95% (0.9929767189018699, 1.0001073181614768)
+  voice 1.5xB_v (descriptive) L=5000k data ratio 0.9939 95% (0.9899410992584331, 0.9978010952322125)
+  voice 1.5xB_v (descriptive) L=5000k res  ratio 1.0005 95% (0.9990478880161857, 1.0019125936614433)
+  tcp_hambre runs per cell (main analysis): {'E1_IOU_FIFO_L500k_k3_m0.2_c1_f1514': 3, 'E1_LXR_FIFO_L500k_k3_m0.2_c1_f1514': 3, 'E1_LXR_FIFO_L5000k_k3_m0.2_c1_f1514': 1, 'E1_LXR_FIFO_L1000k_k3_m0.2_c1_f1514': 1, 'E1_LXR_FIFO_L2000k_k3_m0.2_c1_f1514': 1}
+
+Positive control (excess = median p99 CPOS - median floor of its platform and L)
+  IOU  L=500k p99 27.95 floor 3.79 excess 24.16 = 1.00 T_s | literal (<= EMI) False | physical (<= T_s+EMI = 27.24) True
+  IOU  L=1000k p99 22.27 floor 2.07 excess 20.21 = 1.67 T_s | literal (<= EMI) False | physical (<= T_s+EMI = 14.11) False
+  IOU  L=2000k p99 15.44 floor 1.21 excess 14.23 = 2.35 T_s | literal (<= EMI) False | physical (<= T_s+EMI = 8.06) False
+  IOU  L=3000k p99 13.23 floor 0.93 excess 12.30 = 3.05 T_s | literal (<= EMI) False | physical (<= T_s+EMI = 6.04) False
+  IOU  L=5000k p99 2.97 floor 0.69 excess 2.28 = 0.94 T_s | literal (<= EMI) False | physical (<= T_s+EMI = 4.42) True
+  LXR  L=500k p99 27.11 floor 3.72 excess 23.39 = 0.97 T_s | literal (<= EMI) False | physical (<= T_s+EMI = 27.24) True
+  LXR  L=1000k p99 13.76 floor 2.00 excess 11.76 = 0.97 T_s | literal (<= EMI) False | physical (<= T_s+EMI = 14.11) True
+  LXR  L=2000k p99 7.00 floor 1.14 excess 5.86 = 0.97 T_s | literal (<= EMI) False | physical (<= T_s+EMI = 8.06) True
+  LXR  L=3000k p99 4.74 floor 0.86 excess 3.88 = 0.96 T_s | literal (<= EMI) False | physical (<= T_s+EMI = 6.04) True
+  LXR  L=5000k p99 2.91 floor 0.62 excess 2.29 = 0.94 T_s | literal (<= EMI) False | physical (<= T_s+EMI = 4.42) True
+  LXR  L=10000k p99 1.54 floor 0.46 excess 1.08 = 0.89 T_s | literal (<= EMI) True | physical (<= T_s+EMI = 3.21) True
+
+E4(a) (median of per-run ratio measured/bound, 95% bootstrap CI)
+  E1R_IOU_CBWFQ_L1000k_k3_m0.5_c1_f1514        CBWFQ bound 2*T_r+T_s (RFC 2212)   38.78 ratio 2.417 [2.386,2.425]
+  E1R_IOU_CBWFQ_L1000k_k3_m1_c1_f1514          CBWFQ bound 2*T_r+T_s (RFC 2212)   32.11 ratio 2.402 [2.382,2.428]
+  E1R_IOU_CBWFQ_L1000k_k3_m3_c1_f1514          CBWFQ bound 2*T_r+T_s (RFC 2212)   22.11 ratio 1.822 [1.793,1.859]
+  E1R_IOU_CBWFQ_L2000k_k3_m0.5_c1_f1514        CBWFQ bound 2*T_r+T_s (RFC 2212)   32.72 ratio 2.938 [2.910,2.961]
+  E1R_IOU_CBWFQ_L2000k_k3_m1_c1_f1514          CBWFQ bound 2*T_r+T_s (RFC 2212)   26.06 ratio 2.842 [2.823,2.868]
+  E1R_IOU_CBWFQ_L2000k_k3_m3_c1_f1514          CBWFQ bound 2*T_r+T_s (RFC 2212)   16.06 ratio 2.488 [2.442,2.550]
+  E1R_IOU_CBWFQ_L3000k_k3_m0.5_c1_f1514        CBWFQ bound 2*T_r+T_s (RFC 2212)   30.70 ratio 3.213 [3.159,3.256]
+  E1R_IOU_CBWFQ_L3000k_k3_m1_c1_f1514          CBWFQ bound 2*T_r+T_s (RFC 2212)   24.04 ratio 3.014 [3.000,3.023]
+  E1R_IOU_CBWFQ_L3000k_k3_m3_c1_f1514          CBWFQ bound 2*T_r+T_s (RFC 2212)   14.04 ratio 2.787 [2.757,2.809]
+  E1R_IOU_CBWFQ_L5000k_k3_m0.5_c1_f1514        CBWFQ bound 2*T_r+T_s (RFC 2212)   29.09 ratio 3.275 [3.269,3.283]
+  E1R_IOU_CBWFQ_L5000k_k3_m1_c1_f1514          CBWFQ bound 2*T_r+T_s (RFC 2212)   22.42 ratio 3.282 [3.274,3.294]
+  E1R_IOU_CBWFQ_L5000k_k3_m3_c1_f1514          CBWFQ bound 2*T_r+T_s (RFC 2212)   12.42 ratio 3.047 [3.024,3.082]
+  E1R_IOU_CBWFQ_L500k_k3_m0.5_c1_f1514         CBWFQ bound 2*T_r+T_s (RFC 2212)   50.89 ratio 2.030 [2.006,2.056]
+  E1R_IOU_CBWFQ_L500k_k3_m1_c1_f1514           CBWFQ bound 2*T_r+T_s (RFC 2212)   44.22 ratio 1.790 [1.757,1.810]
+  E1R_IOU_LLQ_L1000k_k3_m0.5_c1_f1514          LLQ   bound T_s+T_voz+floor        15.89 ratio 1.121 [1.108,1.148] | without floor 1.289
+  E1R_IOU_LLQ_L1000k_k3_m1_c1_f1514            LLQ   bound T_s+T_voz+floor        15.89 ratio 1.123 [1.117,1.134] | without floor 1.291
+  E1R_IOU_LLQ_L1000k_k3_m3_c1_f1514            LLQ   bound T_s+T_voz+floor        15.89 ratio 1.121 [1.088,1.142] | without floor 1.289
+  E1R_IOU_LLQ_L2000k_k3_m0.5_c1_f1514          LLQ   bound T_s+T_voz+floor         8.12 ratio 1.293 [1.258,1.332] | without floor 1.518
+  E1R_IOU_LLQ_L2000k_k3_m1_c1_f1514            LLQ   bound T_s+T_voz+floor         8.12 ratio 1.293 [1.263,1.336] | without floor 1.519
+  E1R_IOU_LLQ_L2000k_k3_m3_c1_f1514            LLQ   bound T_s+T_voz+floor         8.12 ratio 1.348 [1.306,1.381] | without floor 1.583
+  E1R_IOU_LLQ_L3000k_k3_m0.5_c1_f1514          LLQ   bound T_s+T_voz+floor         5.54 ratio 1.331 [1.308,1.359] | without floor 1.599
+  E1R_IOU_LLQ_L3000k_k3_m1_c1_f1514            LLQ   bound T_s+T_voz+floor         5.54 ratio 1.321 [1.288,1.338] | without floor 1.587
+  E1R_IOU_LLQ_L3000k_k3_m3_c1_f1514            LLQ   bound T_s+T_voz+floor         5.54 ratio 1.324 [1.302,1.332] | without floor 1.591
+  E1R_IOU_LLQ_L5000k_k3_m0.5_c1_f1514          LLQ   bound T_s+T_voz+floor         3.46 ratio 1.456 [1.375,1.479] | without floor 1.822
+  E1R_IOU_LLQ_L5000k_k3_m1_c1_f1514            LLQ   bound T_s+T_voz+floor         3.46 ratio 1.378 [1.341,1.435] | without floor 1.725
+  E1R_IOU_LLQ_L5000k_k3_m3_c1_f1514            LLQ   bound T_s+T_voz+floor         3.46 ratio 1.394 [1.363,1.419] | without floor 1.744
+  E1R_IOU_LLQ_L500k_k3_m0.5_c1_f1514           LLQ   bound T_s+T_voz+floor        31.44 ratio 0.952 [0.943,0.977] | without floor 1.082
+  E1R_IOU_LLQ_L500k_k3_m1_c1_f1514             LLQ   bound T_s+T_voz+floor        31.44 ratio 0.969 [0.944,0.989] | without floor 1.101
+  E1_IOU_CBWFQ_L1000k_k1_m0.2_c1_f1514         CBWFQ bound 2*T_r+T_s (RFC 2212)   45.45 ratio 1.255 [1.231,1.282]
+  E1_IOU_CBWFQ_L1000k_k2_m0.2_c1_f1514         CBWFQ bound 2*T_r+T_s (RFC 2212)   45.45 ratio 2.160 [2.146,2.188]
+  E1_IOU_CBWFQ_L1000k_k3_m0.2_c1_f1514         CBWFQ bound 2*T_r+T_s (RFC 2212)   45.45 ratio 2.664 [2.657,2.694]
+  E1_IOU_CBWFQ_L2000k_k1_m0.2_c1_f1514         CBWFQ bound 2*T_r+T_s (RFC 2212)   39.39 ratio 1.661 [1.653,1.663]
+  E1_IOU_CBWFQ_L2000k_k2_m0.2_c1_f1514         CBWFQ bound 2*T_r+T_s (RFC 2212)   39.39 ratio 2.422 [2.404,2.448]
+  E1_IOU_CBWFQ_L2000k_k3_m0.2_c1_f1514         CBWFQ bound 2*T_r+T_s (RFC 2212)   39.39 ratio 3.075 [3.061,3.113]
+  E1_IOU_CBWFQ_L3000k_k1_m0.2_c1_f1514         CBWFQ bound 2*T_r+T_s (RFC 2212)   37.37 ratio 1.889 [1.878,1.896]
+  E1_IOU_CBWFQ_L3000k_k2_m0.2_c1_f1514         CBWFQ bound 2*T_r+T_s (RFC 2212)   37.37 ratio 2.651 [2.632,2.656]
+  E1_IOU_CBWFQ_L3000k_k3_m0.2_c1_f1514         CBWFQ bound 2*T_r+T_s (RFC 2212)   37.37 ratio 3.326 [3.280,3.340]
+  E1_IOU_CBWFQ_L5000k_k1_m0.2_c1_f1514         CBWFQ bound 2*T_r+T_s (RFC 2212)   35.76 ratio 1.805 [1.802,1.809]
+  E1_IOU_CBWFQ_L5000k_k2_m0.2_c1_f1514         CBWFQ bound 2*T_r+T_s (RFC 2212)   35.76 ratio 2.646 [2.633,2.653]
+  E1_IOU_CBWFQ_L5000k_k3_m0.2_c1_f1514         CBWFQ bound 2*T_r+T_s (RFC 2212)   35.76 ratio 3.330 [3.303,3.349]
+  E1_IOU_CBWFQ_L500k_k1_m0.2_c1_f1514          CBWFQ bound 2*T_r+T_s (RFC 2212)   57.56 ratio 0.905 [0.897,0.913]
+  E1_IOU_CBWFQ_L500k_k2_m0.2_c1_f1514          CBWFQ bound 2*T_r+T_s (RFC 2212)   57.56 ratio 1.824 [1.806,1.831]
+  E1_IOU_CBWFQ_L500k_k3_m0.2_c1_f1514          CBWFQ bound 2*T_r+T_s (RFC 2212)   57.56 ratio 2.211 [2.192,2.222]
+  E1_IOU_LLQ_L1000k_k1_m0.2_c1_f1514           LLQ   bound T_s+T_voz+floor        15.89 ratio 1.173 [1.168,1.181] | without floor 1.349
+  E1_IOU_LLQ_L1000k_k2_m0.2_c1_f1514           LLQ   bound T_s+T_voz+floor        15.89 ratio 1.142 [1.113,1.151] | without floor 1.313
+  E1_IOU_LLQ_L1000k_k3_m0.2_c1_f1514           LLQ   bound T_s+T_voz+floor        15.89 ratio 1.136 [1.119,1.155] | without floor 1.306
+  E1_IOU_LLQ_L2000k_k1_m0.2_c1_f1514           LLQ   bound T_s+T_voz+floor         8.12 ratio 1.373 [1.321,1.394] | without floor 1.612
+  E1_IOU_LLQ_L2000k_k2_m0.2_c1_f1514           LLQ   bound T_s+T_voz+floor         8.12 ratio 1.317 [1.281,1.328] | without floor 1.547
+  E1_IOU_LLQ_L2000k_k3_m0.2_c1_f1514           LLQ   bound T_s+T_voz+floor         8.12 ratio 1.309 [1.276,1.362] | without floor 1.537
+  E1_IOU_LLQ_L3000k_k1_m0.2_c1_f1514           LLQ   bound T_s+T_voz+floor         5.54 ratio 1.348 [1.308,1.375] | without floor 1.619
+  E1_IOU_LLQ_L3000k_k2_m0.2_c1_f1514           LLQ   bound T_s+T_voz+floor         5.54 ratio 1.324 [1.299,1.328] | without floor 1.591
+  E1_IOU_LLQ_L3000k_k3_m0.2_c1_f1514           LLQ   bound T_s+T_voz+floor         5.54 ratio 1.335 [1.329,1.346] | without floor 1.604
+  E1_IOU_LLQ_L5000k_k1_m0.2_c1_f1514           LLQ   bound T_s+T_voz+floor         3.46 ratio 1.537 [1.533,1.544] | without floor 1.923
+  E1_IOU_LLQ_L5000k_k2_m0.2_c1_f1514           LLQ   bound T_s+T_voz+floor         3.46 ratio 1.403 [1.359,1.421] | without floor 1.756
+  E1_IOU_LLQ_L5000k_k3_m0.2_c1_f1514           LLQ   bound T_s+T_voz+floor         3.46 ratio 1.408 [1.341,1.454] | without floor 1.762
+  E1_IOU_LLQ_L500k_k1_m0.2_c1_f1514            LLQ   bound T_s+T_voz+floor        31.44 ratio 1.000 [0.978,1.005] | without floor 1.137
+  E1_IOU_LLQ_L500k_k2_m0.2_c1_f1514            LLQ   bound T_s+T_voz+floor        31.44 ratio 0.917 [0.901,0.940] | without floor 1.042
+  E1_IOU_LLQ_L500k_k3_m0.2_c1_f1514            LLQ   bound T_s+T_voz+floor        31.44 ratio 0.962 [0.939,0.980] | without floor 1.094

@@ -1,0 +1,22 @@
+# never in this repository
+manuscript/
+PAPER*.md
+DRAFT*.md
+BORRADOR*.md
+VENUE*.md
+*.image
+*.bin
+*.ris
+slr_exports/
+records.json
+# raw campaign data live in the Zenodo archive
+*.pcap
+F4_campana/campaign/*/send_*.csv
+F4_campana/campaign/*/recv_*.csv
+F4_campana/campaign/*/cli_*.json
+F4_campana/campaign/*/srv_*.json
+F4_campana/campaign/_invalid/
+F4_campana/pilot/*/send_*.csv
+F4_campana/pilot/*/recv_*.csv
+__pycache__/
+.venv/

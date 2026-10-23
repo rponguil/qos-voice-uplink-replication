@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this package, please cite the article and this software version."
+title: "When Is Strict Priority Needed for Voice on Slow Home-Office Uplinks? A Replicated Emulation Study of CBWFQ, LLQ, fq_codel and CAKE: reproducibility package"
+authors:
+  - family-names: "Ponguillo-Intriago"
+    given-names: "Ronald"
+    orcid: "https://orcid.org/0000-0002-7554-8367"
+    affiliation: "Facultad de Ciencias Matemáticas y Físicas, Universidad de Guayaquil, Guayaquil 090510, Ecuador"
+  - family-names: "Barros Palma"
+    given-names: "Derian S."
+    orcid: "https://orcid.org/0009-0008-2146-3262"
+    affiliation: "Facultad de Ciencias Matemáticas y Físicas, Universidad de Guayaquil, Guayaquil 090510, Ecuador"
+  - family-names: "Rodríguez Borbor"
+    given-names: "Jonathan A."
+    orcid: "https://orcid.org/0009-0002-2535-9530"
+    affiliation: "Facultad de Ciencias Matemáticas y Físicas, Universidad de Guayaquil, Guayaquil 090510, Ecuador"
+version: "1.0.0"
+doi: "[ZENODO CODE DOI]"
+license: MIT
+repository-code: "https://github.com/rponguil/qos-voice-uplink-replication"

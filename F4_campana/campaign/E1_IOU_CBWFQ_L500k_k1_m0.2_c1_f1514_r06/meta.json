@@ -1,0 +1,194 @@
+{
+ "name": "E1_IOU_CBWFQ_L500k_k1_m0.2_c1_f1514_r06",
+ "policy": "CBWFQ",
+ "rate_bps": 475000,
+ "duration": 60,
+ "queue_limit": 64,
+ "voice_pct": 30,
+ "platform": "IOU",
+ "line_bps": 500000,
+ "bc_bits": 1900,
+ "flows": [
+  {
+   "kind": "probe",
+   "node": "CW-VOZ",
+   "port": 5001,
+   "dscp": 46,
+   "size": 172,
+   "interval": 0.02,
+   "flow": 100
+  },
+  {
+   "kind": "probe",
+   "node": "RES-1",
+   "port": 5201,
+   "dscp": 0,
+   "size": 1472,
+   "interval": 0.02944,
+   "flow": 4
+  },
+  {
+   "kind": "tcp",
+   "node": "RES-1",
+   "port": 5301,
+   "dscp": 0,
+   "streams": 1,
+   "mss": null
+  }
+ ],
+ "t_start": "2026-10-13T18:39:08",
+ "stagger_s": 0.0,
+ "iperf_stuck_at_cap": {},
+ "iperf_wait_left_s": 59.9,
+ "host_power": {
+  "governor": "performance",
+  "idle_disabled": [
+   "0",
+   "0",
+   "1",
+   "1"
+  ]
+ },
+ "loadavg_start": [
+  0.1748046875,
+  0.2421875,
+  0.296875
+ ],
+ "loadavg_end": [
+  0.15185546875,
+  0.22265625,
+  0.283203125
+ ],
+ "iou_cpu_frac": 0.023952018753374615,
+ "timing_s": {
+  "t0": 0.0,
+  "config_done": 18.8,
+  "flows_started": 21.7,
+  "drained": 88.0,
+  "fetched": 91.9
+ },
+ "cell": {
+  "exp": "E1",
+  "platform": "IOU",
+  "policy": "CBWFQ",
+  "L": 500000,
+  "k": 1,
+  "m": 0.2,
+  "calls": 1,
+  "frame": 1514,
+  "marked": true,
+  "floor": false,
+  "Q": 64,
+  "reps": 17,
+  "dur": 60,
+  "r_frac": 0.95,
+  "be_eq_bc": false,
+  "htb_burst": null,
+  "cs1_data": false,
+  "host_load": false,
+  "voice_over": null,
+  "positive": false,
+  "custom": null,
+  "id": "E1_IOU_CBWFQ_L500k_k1_m0.2_c1_f1514",
+  "warmup": 20
+ },
+ "rep": 6,
+ "seed_info": {
+  "seed": 20261012,
+  "script_sha256_16": {
+   "campaign.py": "0684210359a63c5c",
+   "runner.py": "aca54aec752410d9",
+   "f2lib.py": "aedaea85cb7dfe3c",
+   "modem_backlog.sh": "638fabd8008efa9c",
+   "udpprobe.py": "c0ef468e0efd2f7c"
+  },
+  "image": "sha256:98d8be25f2e4d0e9f12ff88ea1e54c512bc5883ad23091effc20ab32c7d628ec",
+  "protocol_sha256": "c84b7f584a29fad92d905746494c9005860a948e52f89df8ced7853e798e2f8f"
+ },
+ "reservations": {
+  "B_v_kbps": 103,
+  "B_vid_kbps": 119,
+  "B_dat_kbps": 95
+ },
+ "R": 475000,
+ "htb_burst_B": null,
+ "wall_s": 93.6,
+ "router_health": {
+  "pre": {
+   "ignored": 64,
+   "per_interface": {
+    "Ethernet0/0_overrun": 0,
+    "Ethernet0/0_input_errors": 21,
+    "Ethernet0/0": 21,
+    "Ethernet0/2_overrun": 0,
+    "Ethernet0/2_input_errors": 43,
+    "Ethernet0/2": 43
+   },
+   "buffer_failures": 0
+  },
+  "post": {
+   "ignored": 64,
+   "per_interface": {
+    "Ethernet0/0_overrun": 0,
+    "Ethernet0/0_input_errors": 21,
+    "Ethernet0/0": 21,
+    "Ethernet0/2_overrun": 0,
+    "Ethernet0/2_input_errors": 43,
+    "Ethernet0/2": 43
+   },
+   "buffer_failures": 0
+  }
+ },
+ "ingress_loss_delta": {
+  "Ethernet0/0_overrun": 0,
+  "Ethernet0/0_input_errors": 0,
+  "Ethernet0/0": 0,
+  "Ethernet0/2_overrun": 0,
+  "Ethernet0/2_input_errors": 0,
+  "Ethernet0/2": 0,
+  "ignored_total": 0,
+  "buffer_failures": 0
+ },
+ "marcada": false,
+ "host_load_threshold": 1.7,
+ "tcp_hambre": [],
+ "accounting": {
+  "sent_udp": 5038,
+  "sent_tcp_cap": 1070,
+  "router_total": 6110
+ },
+ "per_class": {
+  "sent": {
+   "voz": 3000,
+   "default": 3108,
+   "datos": 0
+  },
+  "classified": {
+   "voz": 3000,
+   "video": 0,
+   "datos": 0,
+   "default": 3110
+  },
+  "received_at_sink": {
+   "voz": 3000,
+   "default": 1989,
+   "datos": 0
+  }
+ },
+ "shaper_rate_bps": 474950,
+ "shaper_err": -0.0001,
+ "voice_owd_capture_path": {
+  "n": 1999,
+  "p50": 19.407033920288086,
+  "p99": 53.38096618652344,
+  "sent_cap": 3000,
+  "recv_cap": 3000
+ },
+ "load1": 0.12841796875,
+ "prerun_s": {
+  "c7200_stop": 0.0,
+  "cool_down": 0.0,
+  "c7200_boot": 0.0
+ },
+ "invalid_reasons": []
+}

@@ -1,0 +1,36 @@
+EXPLORATORY. Tables only.
+
+1. COLLAPSES WITHOUT RELATION TO RESIDENTIAL UDP OR VIDEO (6): voice delay vs TCP one-way delay per segment (own pcap reader: source capture vs SINK capture, first transmission of each (port, seq)), interpolated at voice send instants
+  CNEG_IOU_CBWFQ_L500k_k3_m0.2_c1_f1514_unmarked r02 loss 0.085: r(voice,res TCP) 0.001 (n seg 446) [others median -0.038, range -0.083..0.050] | r(voice,data TCP) 0.195 (n seg 155) [others median 0.012, range -0.034..0.074]
+  CNEG_IOU_CBWFQ_L500k_k3_m0.2_c1_f1514_unmarked r08 loss 0.076: r(voice,res TCP) 0.187 (n seg 145) [others median -0.038, range -0.083..0.050] | r(voice,data TCP) -0.173 (n seg 442) [others median 0.012, range -0.034..0.074]
+  CNEG_IOU_LLQ_L2000k_k1_m0.2_c1_f1514_unmarked  r16 loss 0.049: r(voice,res TCP) 0.799 (n seg 2999) [others median 0.012, range -0.027..0.055]
+  CNEG_IOU_LLQ_L3000k_k3_m0.2_c1_f1514_unmarked  r04 loss 0.026: r(voice,res TCP) 0.105 (n seg 2605) [others median 0.011, range -0.108..0.038] | r(voice,data TCP) 0.67 (n seg 2301) [others median 0.017, range -0.040..0.061]
+  E2_LXR_FQC_L1000k_k3_m0.2_c4_f590              r01 loss 0.239: r(voice,res TCP) 0.124 (n seg 851) [others median -0.008, range -0.031..0.029] | r(voice,data TCP) 0.101 (n seg 1721) [others median -0.014, range -0.044..0.014]
+  S_LXR_FQC_L5000k_k3_m0.2_c1_f1514_htbBc        r17 loss 0.160: r(voice,res TCP) -0.017 (n seg 4074) [others median -0.010, range -0.041..0.023] | r(voice,data TCP) 0.39 (n seg 4059) [others median -0.014, range -0.054..0.007]
+
+2. SHAPER PARAMETERS APPLIED BY IOS ('show policy-map interface' after each run) vs CONFIGURED (Bc = ceil(R x 4 ms), Be = 0); Tc = Bc / CIR
+  CPOS_IOU_FIFO_L500k_k1_m0.2_c1_f1514_pos configured cir 475000 bc 1900 be 0 | applied (17 runs, 1 distinct): cir 475000 bc 1900 be 0 -> Tc 4.00 ms | 1514-B frame = 6.37 Bc
+  CPOS_IOU_FIFO_L1000k_k1_m0.2_c1_f1514_po configured cir 950000 bc 3800 be 0 | applied (17 runs, 1 distinct): cir 950000 bc 3800 be 0 -> Tc 4.00 ms | 1514-B frame = 3.19 Bc
+  CPOS_IOU_FIFO_L2000k_k1_m0.2_c1_f1514_po configured cir 1900000 bc 7600 be 0 | applied (17 runs, 1 distinct): cir 1900000 bc 7600 be 0 -> Tc 4.00 ms | 1514-B frame = 1.59 Bc
+  CPOS_IOU_FIFO_L3000k_k1_m0.2_c1_f1514_po configured cir 2850000 bc 11400 be 0 | applied (17 runs, 1 distinct): cir 2850000 bc 11400 be 0 -> Tc 4.00 ms | 1514-B frame = 1.06 Bc
+  CPOS_IOU_FIFO_L5000k_k1_m0.2_c1_f1514_po configured cir 4750000 bc 19000 be 0 | applied (17 runs, 1 distinct): cir 4750000 bc 19000 be 0 -> Tc 4.00 ms | 1514-B frame = 0.64 Bc
+  E1_IOU_LLQ_L500k_k3_m0.2_c1_f1514        configured cir 475000 bc 1900 be 0 | applied (17 runs, 1 distinct): cir 475000 bc 1900 be 0 -> Tc 4.00 ms | 1514-B frame = 6.37 Bc
+  E1_IOU_LLQ_L1000k_k3_m0.2_c1_f1514       configured cir 950000 bc 3800 be 0 | applied (17 runs, 1 distinct): cir 950000 bc 3800 be 0 -> Tc 4.00 ms | 1514-B frame = 3.19 Bc
+  E1_IOU_LLQ_L2000k_k3_m0.2_c1_f1514       configured cir 1900000 bc 7600 be 0 | applied (17 runs, 1 distinct): cir 1900000 bc 7600 be 0 -> Tc 4.00 ms | 1514-B frame = 1.59 Bc
+  E1_IOU_LLQ_L3000k_k3_m0.2_c1_f1514       configured cir 2850000 bc 11400 be 0 | applied (17 runs, 1 distinct): cir 2850000 bc 11400 be 0 -> Tc 4.00 ms | 1514-B frame = 1.06 Bc
+  E1_IOU_LLQ_L5000k_k3_m0.2_c1_f1514       configured cir 4750000 bc 19000 be 0 | applied (17 runs, 1 distinct): cir 4750000 bc 19000 be 0 -> Tc 4.00 ms | 1514-B frame = 0.64 Bc
+  E1_IOU_CBWFQ_L500k_k1_m0.2_c1_f1514      configured cir 475000 bc 1900 be 0 | applied (17 runs, 1 distinct): cir 475000 bc 1900 be 0 -> Tc 4.00 ms | 1514-B frame = 6.37 Bc
+  E1_IOU_CBWFQ_L1000k_k1_m0.2_c1_f1514     configured cir 950000 bc 3800 be 0 | applied (17 runs, 1 distinct): cir 950000 bc 3800 be 0 -> Tc 4.00 ms | 1514-B frame = 3.19 Bc
+  E1_IOU_CBWFQ_L2000k_k1_m0.2_c1_f1514     configured cir 1900000 bc 7600 be 0 | applied (17 runs, 1 distinct): cir 1900000 bc 7600 be 0 -> Tc 4.00 ms | 1514-B frame = 1.59 Bc
+  E1_IOU_CBWFQ_L3000k_k1_m0.2_c1_f1514     configured cir 2850000 bc 11400 be 0 | applied (17 runs, 1 distinct): cir 2850000 bc 11400 be 0 -> Tc 4.00 ms | 1514-B frame = 1.06 Bc
+  E1_IOU_CBWFQ_L5000k_k1_m0.2_c1_f1514     configured cir 4750000 bc 19000 be 0 | applied (17 runs, 1 distinct): cir 4750000 bc 19000 be 0 -> Tc 4.00 ms | 1514-B frame = 0.64 Bc
+
+3. QUEUE LIMITS
+  FIFO-C (IOU PARENT class-default): queue limit {'64'} packets (router_post.txt, E1 k=3 at 1 and 5 Mbit/s)
+  FIFO-L (LXR HTB leaf pfifo): limit {'64'} packets
+  IOU Ethernet0/1 tx ring (queried on the bench 17-10-2026 23:1x with the PARENT policy attached, 'show controllers Ethernet0/1'): 'tx ring entries=64', 'tx_limited=1(4)' (tx ring limited to 4 with the service policy); interface output queue 0/1000 (not used under class-based queueing)
+
+5. Q034 (E4(d)): voice mean one-way delay and mean RFC 3550 jitter per policy (both calls; window [20, 60) s); median over 17 runs [min-max]
+  FIFO  call 1: mean 511.12 [497.90-524.26] ms, jitter 17.15 [13.98-20.68] ms | call 2: mean 511.27 [498.51-524.14] ms, jitter 17.32 [13.89-21.00] ms
+  CBWFQ call 1: mean  48.35 [46.53-50.02] ms, jitter 17.04 [16.54-17.60] ms | call 2: mean  48.23 [44.15-49.33] ms, jitter 15.40 [14.32-16.20] ms
+  LLQ   call 1: mean  16.45 [14.11-17.99] ms, jitter 12.01 [11.01-12.90] ms | call 2: mean  16.30 [13.84-17.36] ms, jitter 12.06 [11.57-13.04] ms

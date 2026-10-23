@@ -1,0 +1,111 @@
+{
+ "name": "S_IOU_CBWFQ_L1000k_k3_m0.2_c1_f1514_d140_r05",
+ "policy": "CBWFQ",
+ "rate": 950000,
+ "iou_cpu": 0.029418668778396707,
+ "probe0": {
+  "n": 5999,
+  "min": 1.900457,
+  "p50": 50.321996,
+  "p95": 108.573052,
+  "p99": 121.952995,
+  "max": 142.950447,
+  "mean": 53.06701923353892,
+  "jitter3550": 26.28593673084002,
+  "sent": 7000,
+  "recv": 7000,
+  "loss": 0.0
+ },
+ "probe1": {
+  "n": 2114,
+  "min": 939.43813,
+  "p50": 997.416504,
+  "p95": 1024.696595,
+  "p99": 1069.834404,
+  "max": 1113.356314,
+  "mean": 998.582512539735,
+  "jitter3550": 13.105977376801324,
+  "sent": 9510,
+  "recv": 2485,
+  "loss": 0.73869610935857
+ },
+ "tcp2": {
+  "rx_bps_total": 204806.10548462873,
+  "rx_bps_steady": 204585.6694596377,
+  "rx_l2_bps_steady": null,
+  "lost": null,
+  "pkts": null,
+  "tcp_hambre": false
+ },
+ "probe3": {
+  "n": 3491,
+  "min": 1467.579196,
+  "p50": 2236.179129,
+  "p95": 2263.812239,
+  "p99": 2334.312645,
+  "max": 2359.386716,
+  "mean": 2234.0400295264967,
+  "jitter3550": 17.128409975763557,
+  "sent": 10500,
+  "recv": 4139,
+  "loss": 0.6058095238095238
+ },
+ "tcp4": {
+  "rx_bps_total": 185242.931324294,
+  "rx_bps_steady": 188681.9794418394,
+  "rx_l2_bps_steady": null,
+  "lost": null,
+  "pkts": null,
+  "tcp_hambre": false
+ },
+ "modem": {
+  "sent_bytes": 16841027,
+  "sent_pkts": 18479,
+  "drops": 0,
+  "overlimits": 0,
+  "backlog_max_bytes": 3242,
+  "backlog_frac_gt_mtu_bytes": 0.27086507533434906,
+  "backlog_samples": 5907,
+  "backlog_max_pkts": 8,
+  "backlog_frac_gt1": 0.35500253936008125
+ },
+ "router": {
+  "if_out_drops": 13692,
+  "if_out_pkts": 18473,
+  "class-default": {
+   "pkts": 32165,
+   "bytes": 34568161,
+   "out_pkts": 18473,
+   "drops": 13692,
+   "exceed_drops": null
+  },
+  "CM-VOZ": {
+   "pkts": 7000,
+   "bytes": 1498000,
+   "out_pkts": 7000,
+   "drops": 0,
+   "exceed_drops": null
+  },
+  "CM-VIDEO": {
+   "pkts": 10500,
+   "bytes": 10941000,
+   "out_pkts": 4139,
+   "drops": 6361,
+   "exceed_drops": null
+  },
+  "CM-DATOS": {
+   "pkts": 2492,
+   "bytes": 3772888,
+   "out_pkts": 2304,
+   "drops": 188,
+   "exceed_drops": null
+  },
+  "class-default#2": {
+   "pkts": 12173,
+   "bytes": 18356273,
+   "out_pkts": 5030,
+   "drops": 7143,
+   "exceed_drops": null
+  }
+ }
+}

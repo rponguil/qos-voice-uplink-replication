@@ -1,0 +1,67 @@
+{
+ "name": "E4d_IOU_LLQ_L384k_k0_m0.2_c1_f1514_Q004_r05",
+ "policy": "LLQ",
+ "rate": 364800,
+ "iou_cpu": 0.02128273980079681,
+ "probe0": {
+  "n": 1276,
+  "min": 21.911952,
+  "p50": 35.044972,
+  "p95": 50.997579,
+  "p99": 54.782876,
+  "max": 55.24265,
+  "mean": 35.37492040125392,
+  "jitter3550": 9.731708638274398,
+  "sent": 2936,
+  "recv": 1919,
+  "loss": 0.3463896457765667
+ },
+ "tcp1": {
+  "rx_bps_total": 91371.43214301427,
+  "rx_bps_steady": 96026.33196776109,
+  "rx_l2_bps_steady": null,
+  "lost": null,
+  "pkts": null,
+  "tcp_hambre": false
+ },
+ "modem": {
+  "sent_bytes": 2760696,
+  "sent_pkts": 2446,
+  "drops": 0,
+  "overlimits": 0,
+  "backlog_max_bytes": 4168,
+  "backlog_frac_gt_mtu_bytes": 0.3941972920696325,
+  "backlog_samples": 2585,
+  "backlog_max_pkts": 4,
+  "backlog_frac_gt1": 0.3945841392649903
+ },
+ "router": {
+  "if_out_drops": 1065,
+  "if_out_pkts": 2445,
+  "class-default": {
+   "pkts": 3510,
+   "bytes": 3893076,
+   "out_pkts": 2445,
+   "drops": 1065,
+   "exceed_drops": null
+  },
+  "CM-VIDEO": {
+   "pkts": 2936,
+   "bytes": 3059312,
+   "out_pkts": null,
+   "drops": null,
+   "exceed_drops": 1017
+  },
+  "class-default#2": {
+   "pkts": 574,
+   "bytes": 833764,
+   "out_pkts": 526,
+   "drops": 48,
+   "exceed_drops": null
+  },
+  "PRIORITY_Q": {
+   "drops": 0,
+   "out_pkts": 1919
+  }
+ }
+}

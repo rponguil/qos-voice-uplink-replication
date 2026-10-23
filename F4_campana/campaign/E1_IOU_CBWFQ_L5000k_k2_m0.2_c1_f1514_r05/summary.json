@@ -1,0 +1,103 @@
+{
+ "name": "E1_IOU_CBWFQ_L5000k_k2_m0.2_c1_f1514_r05",
+ "policy": "CBWFQ",
+ "rate": 4750000,
+ "iou_cpu": 0.054958377523683224,
+ "probe0": {
+  "n": 2000,
+  "min": 0.514778,
+  "p50": 34.870933,
+  "p95": 91.353208,
+  "p99": 94.02713,
+  "max": 97.192704,
+  "mean": 39.651829701000004,
+  "jitter3550": 22.10124660000694,
+  "sent": 3000,
+  "recv": 3000,
+  "loss": 0.0
+ },
+ "probe1": {
+  "n": 5226,
+  "min": 129.544403,
+  "p50": 135.166215,
+  "p95": 138.063637,
+  "p99": 139.201423,
+  "max": 146.224136,
+  "mean": 135.341498894757,
+  "jitter3550": 2.6207015003522645,
+  "sent": 20380,
+  "recv": 7837,
+  "loss": 0.6154563297350344
+ },
+ "tcp2": {
+  "rx_bps_total": 1514413.9278551454,
+  "rx_bps_steady": 1513846.1013212248,
+  "rx_l2_bps_steady": null,
+  "lost": null,
+  "pkts": null,
+  "tcp_hambre": false
+ },
+ "probe3": {
+  "n": 7192,
+  "min": 309.998909,
+  "p50": 363.063778,
+  "p95": 366.499524,
+  "p99": 367.264282,
+  "max": 415.154912,
+  "mean": 362.8968844157397,
+  "jitter3550": 3.2829126676821514,
+  "sent": 22497,
+  "recv": 10827,
+  "loss": 0.5187358314441926
+ },
+ "modem": {
+  "sent_bytes": 35692908,
+  "sent_pkts": 29551,
+  "drops": 0,
+  "overlimits": 0,
+  "backlog_max_bytes": 4070,
+  "backlog_frac_gt_mtu_bytes": 0.4312210200927357,
+  "backlog_samples": 2588,
+  "backlog_max_pkts": 6,
+  "backlog_frac_gt1": 0.44938176197836166
+ },
+ "router": {
+  "if_out_drops": 24274,
+  "if_out_pkts": 29548,
+  "class-default": {
+   "pkts": 53822,
+   "bytes": 66935414,
+   "out_pkts": 29548,
+   "drops": 24274,
+   "exceed_drops": null
+  },
+  "CM-VOZ": {
+   "pkts": 3000,
+   "bytes": 642000,
+   "out_pkts": 3000,
+   "drops": 0,
+   "exceed_drops": null
+  },
+  "CM-VIDEO": {
+   "pkts": 22497,
+   "bytes": 23441874,
+   "out_pkts": 10827,
+   "drops": 11670,
+   "exceed_drops": null
+  },
+  "CM-DATOS": {
+   "pkts": 0,
+   "bytes": 0,
+   "out_pkts": 0,
+   "drops": 0,
+   "exceed_drops": null
+  },
+  "class-default#2": {
+   "pkts": 28325,
+   "bytes": 42851540,
+   "out_pkts": 15721,
+   "drops": 12604,
+   "exceed_drops": null
+  }
+ }
+}

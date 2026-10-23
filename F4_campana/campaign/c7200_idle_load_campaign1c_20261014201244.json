@@ -1,0 +1,8 @@
+{
+ "t": "2026-10-14 20:12:44",
+ "mode": "campaign1c",
+ "load_off": 0.74,
+ "load_on_idle_240s": 1.212,
+ "delta": 0.472,
+ "threshold_c7200": 2.172
+}

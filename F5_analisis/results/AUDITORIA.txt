@@ -1,0 +1,32 @@
+runs total 4304; main 4201; battery originals 103; _ac 103
+cells 245 (floors 12); all complete: True
+marcadas (main) 333; exentas 170; runs with tcp_hambre 9
+
+variable            non-null/total     min          max
+p99                 4201/ 4201       0.442931   3525.29921   zeros 0
+p95                 4201/ 4201       0.415412  3489.556508   zeros 0
+p50                 4201/ 4201       0.348926  2326.225773   zeros 0
+min                 4201/ 4201       0.282854  1993.529382   zeros 0
+max                 4201/ 4201       0.576658  3528.727262   zeros 0
+loss_w              4201/ 4201            0.0 0.8039019509   zeros 3595
+jitter              4201/ 4201   0.0107460254 43.061437362   zeros 0
+n_sent_w            4201/ 4201         1956.0       6000.0   zeros 0
+n_recv_w            4201/ 4201          392.0       6000.0   zeros 0
+gp_data             2584/ 4201            0.0 4543062.5146   zeros 33
+gp_res              3723/ 4201            0.0 4502518.6292   zeros 21
+shaper_rate_bps     3672/ 4201       462797.0    9500157.0   zeros 0
+shaper_err          3672/ 4201         -0.107       0.0005   zeros 910
+summary_p99         4201/ 4201       0.442931   3525.29921   zeros 0
+capture_p99         4150/ 4201   0.4110336303 3525.2850055   zeros 0
+load1               4201/ 4201    0.005859375 9.5942382812   zeros 0
+  expected: gp_data only k=3/E4d-Q034; gp_res k>=1 & Q004; shaper_* only saturated cells (k>=1, not CPOS/E4d); capture_p99 not for Q004
+  unexpected nulls: none
+
+physical checks:
+  all pass
+
+p99 recomputed vs summary: n 4201, max diff 0.000000 ms, > 1 us: 0 []
+p99 recomputed vs capture path: n 4150, max diff 0.0603 ms, > 0.1 ms: 0 []
+floors (median p99, amplitude) ms: C7200 1000k 12.02 (0.09); IOU 500k 3.79 (0.15); IOU 1000k 2.07 (0.72); IOU 2000k 1.21 (0.11); IOU 3000k 0.93 (0.05); IOU 5000k 0.69 (0.08); LXR 500k 3.72 (0.04); LXR 1000k 2.00 (0.05); LXR 2000k 1.14 (0.05); LXR 3000k 0.86 (0.03); LXR 5000k 0.62 (0.07); LXR 10000k 0.46 (0.05)
+
+STOP REASONS: none

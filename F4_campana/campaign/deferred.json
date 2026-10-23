@@ -1,0 +1,37 @@
+{
+ "patterns": [],
+ "history": [
+  {
+   "since": "2026-10-11 23:30 (Guayaquil)",
+   "patterns": [
+    "_C7200_"
+   ],
+   "reason": "E4(b) c7200 and its floors set aside pending Ronald's decision (plan \u00a741.4): at 5 Mbit/s the c7200 shaper bursts (modem queue 9.9-10.7 kB > 6840 B P3b threshold, IOU 4.0-4.8 kB); the Dynamips process keeps ~1 core busy, so c7200 runs sit at host load 1.4-1.8 against the 1.70 threshold derived from a pilot without c7200. Not done, not data."
+  },
+  {
+   "since": "2026-10-12 16:15 (Guayaquil)",
+   "patterns": [
+    "E1_IOU_CBWFQ_L2000k_k1_",
+    "E1_IOU_LLQ_L2000k_k1_",
+    "E1_IOU_FIFO_L2000k_k1_",
+    "CNEG_IOU_CBWFQ_L2000k_k1_",
+    "CNEG_IOU_LLQ_L2000k_k1_",
+    "E1_IOU_CBWFQ_L3000k_k1_",
+    "E1_IOU_LLQ_L3000k_k1_",
+    "E1_IOU_FIFO_L3000k_k1_",
+    "CNEG_IOU_CBWFQ_L3000k_k1_",
+    "CNEG_IOU_LLQ_L3000k_k1_"
+   ],
+   "reason": "\u00a742.1: IOU k = 1 at 2 and 3 Mbit/s, all attempts invalid by shaper rate (-6.5 to -10.6 % of R); pending diagnosis and Ronald's choice (i)/(ii). Attempts that passed by chance are NOT data for these cells."
+  },
+  {
+   "since": "2026-10-12 16:15 (Guayaquil)",
+   "note": "c7200 at 5 Mbit/s retired (RETIRED in campaign.py, \u00a742.2); c7200 at 1 Mbit/s runs in mode campaign1c (seed 20261015) at the end of session 1 and inside session 2."
+  },
+  {
+   "since": "2026-10-14 23:15 (Guayaquil)",
+   "patterns": [],
+   "note": "\u00a750: option (i) confirmed by Ronald; IOU k=1 2/3 Mbit/s cells leave deferral (reps 1-9 in mode campaign1k, seed 20261018; 10-17 in session 2), exempt from the shaper-rate criterion only. '_C7200_' also leaves (session 1 c7200 block done in campaign1c; session 2 runs c7200 1 Mbit/s in its order, \u00a743.4)."
+  }
+ ]
+}

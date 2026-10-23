@@ -1,0 +1,93 @@
+{
+ "name": "E1_IOU_LLQ_L5000k_k1_m0.2_c1_f1514_r04",
+ "policy": "LLQ",
+ "rate": 4750000,
+ "iou_cpu": 0.045371006529242176,
+ "probe0": {
+  "n": 5749,
+  "min": 0.513525,
+  "p50": 2.765757,
+  "p95": 4.863511,
+  "p99": 5.313891,
+  "max": 23.956187,
+  "mean": 2.7789813711949902,
+  "jitter3550": 1.5621847063664656,
+  "sent": 6000,
+  "recv": 6000,
+  "loss": 0.0
+ },
+ "probe1": {
+  "n": 22075,
+  "min": 88.532171,
+  "p50": 91.67291,
+  "p95": 94.935547,
+  "p99": 107.512067,
+  "max": 130.275476,
+  "mean": 92.31531642355606,
+  "jitter3550": 2.2635383020487994,
+  "sent": 40760,
+  "recv": 23055,
+  "loss": 0.4343719332679097
+ },
+ "tcp2": {
+  "rx_bps_total": 2225500.6668024287,
+  "rx_bps_steady": 2223615.496964972,
+  "rx_l2_bps_steady": null,
+  "lost": null,
+  "pkts": null
+ },
+ "modem": {
+  "sent_bytes": 71122811,
+  "sent_pkts": 52156,
+  "drops": 0,
+  "overlimits": 0,
+  "backlog_max_bytes": 4542,
+  "backlog_frac_gt_mtu_bytes": 0.43565525383707204,
+  "backlog_samples": 5082,
+  "backlog_max_pkts": 4,
+  "backlog_frac_gt1": 0.43545848091302636
+ },
+ "router": {
+  "if_out_drops": 17862,
+  "if_out_pkts": 52152,
+  "class-default": {
+   "pkts": 70014,
+   "bytes": 98165800,
+   "out_pkts": 52152,
+   "drops": 17862,
+   "exceed_drops": null
+  },
+  "CM-VOZ": {
+   "pkts": 6000,
+   "bytes": 1284000,
+   "out_pkts": null,
+   "drops": null,
+   "exceed_drops": 0
+  },
+  "CM-VIDEO": {
+   "pkts": 0,
+   "bytes": 0,
+   "out_pkts": 0,
+   "drops": 0,
+   "exceed_drops": null
+  },
+  "CM-DATOS": {
+   "pkts": 0,
+   "bytes": 0,
+   "out_pkts": 0,
+   "drops": 0,
+   "exceed_drops": null
+  },
+  "class-default#2": {
+   "pkts": 64014,
+   "bytes": 96881800,
+   "out_pkts": 46152,
+   "drops": 17862,
+   "exceed_drops": null
+  },
+  "PRIORITY_Q": {
+   "drops": 0,
+   "out_pkts": 6000
+  }
+ }
+}

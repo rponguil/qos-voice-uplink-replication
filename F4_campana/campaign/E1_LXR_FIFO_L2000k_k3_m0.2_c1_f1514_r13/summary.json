@@ -1,0 +1,76 @@
+{
+ "name": "E1_LXR_FIFO_L2000k_k3_m0.2_c1_f1514_r13",
+ "policy": "FIFO",
+ "rate": 1900000,
+ "iou_cpu": 0.019376792526545283,
+ "probe0": {
+  "n": 1021,
+  "min": 269.743571,
+  "p50": 304.458369,
+  "p95": 321.331268,
+  "p99": 326.287631,
+  "max": 341.582505,
+  "mean": 305.0921212438786,
+  "jitter3550": 5.464031608507716,
+  "sent": 3000,
+  "recv": 1690,
+  "loss": 0.43666666666666665
+ },
+ "probe1": {
+  "n": 3392,
+  "min": 283.883135,
+  "p50": 307.974213,
+  "p95": 324.684666,
+  "p99": 331.287443,
+  "max": 344.740682,
+  "mean": 308.58613193219344,
+  "jitter3550": 2.7181361203215464,
+  "sent": 8152,
+  "recv": 5116,
+  "loss": 0.372423945044161
+ },
+ "tcp2": {
+  "rx_bps_total": 22284.81881876317,
+  "rx_bps_steady": 3658.1057451412594,
+  "rx_l2_bps_steady": null,
+  "lost": null,
+  "pkts": null,
+  "tcp_hambre": false
+ },
+ "probe3": {
+  "n": 3959,
+  "min": 281.69988,
+  "p50": 306.676105,
+  "p95": 323.312608,
+  "p99": 329.505498,
+  "max": 342.971239,
+  "mean": 307.21710360949737,
+  "jitter3550": 2.6454984765229708,
+  "sent": 8999,
+  "recv": 5825,
+  "loss": 0.35270585620624517
+ },
+ "tcp4": {
+  "rx_bps_total": 0.0,
+  "rx_bps_steady": 0.0,
+  "tcp_hambre": true,
+  "server_error": "error - select failed: Bad file descriptor"
+ },
+ "modem": {
+  "sent_bytes": 19133869,
+  "sent_pkts": 15940,
+  "drops": 0,
+  "overlimits": 0,
+  "backlog_max_bytes": 3028,
+  "backlog_frac_gt_mtu_bytes": 0.0015497869043006587,
+  "backlog_samples": 2581,
+  "backlog_max_pkts": 2,
+  "backlog_frac_gt1": 0.0015497869043006587
+ },
+ "router": {
+  "sent_bytes": 19133953,
+  "sent_pkts": 15942,
+  "drops": 7630,
+  "overlimits": 15926
+ }
+}

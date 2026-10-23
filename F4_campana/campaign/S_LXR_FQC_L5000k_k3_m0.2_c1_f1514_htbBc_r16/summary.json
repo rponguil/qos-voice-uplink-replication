@@ -1,0 +1,78 @@
+{
+ "name": "S_LXR_FQC_L5000k_k3_m0.2_c1_f1514_htbBc_r16",
+ "policy": "FQ_CODEL",
+ "rate": 4750000,
+ "iou_cpu": 0.018647882548680078,
+ "probe0": {
+  "n": 1999,
+  "min": 0.480461,
+  "p50": 1.658735,
+  "p95": 2.922224,
+  "p99": 3.051506,
+  "max": 4.797124,
+  "mean": 1.689405264632316,
+  "jitter3550": 0.9290395920474431,
+  "sent": 3000,
+  "recv": 3000,
+  "loss": 0.0
+ },
+ "probe1": {
+  "n": 4159,
+  "min": 5.130145,
+  "p50": 567.558126,
+  "p95": 779.343257,
+  "p99": 788.872295,
+  "max": 792.708492,
+  "mean": 503.40309706491945,
+  "jitter3550": 1.9578291453239898,
+  "sent": 20380,
+  "recv": 6274,
+  "loss": 0.6921491658488714
+ },
+ "tcp2": {
+  "rx_bps_total": 1056440.8684822812,
+  "rx_bps_steady": 1052010.0524592123,
+  "rx_l2_bps_steady": null,
+  "lost": null,
+  "pkts": null,
+  "tcp_hambre": false
+ },
+ "probe3": {
+  "n": 5874,
+  "min": 4.20603,
+  "p50": 449.250282,
+  "p95": 632.132844,
+  "p99": 653.827188,
+  "max": 660.990281,
+  "mean": 404.29140290670756,
+  "jitter3550": 2.5417341337664223,
+  "sent": 22497,
+  "recv": 8904,
+  "loss": 0.6042138951860248
+ },
+ "tcp4": {
+  "rx_bps_total": 1052198.988353792,
+  "rx_bps_steady": 1048046.990216216,
+  "rx_l2_bps_steady": null,
+  "lost": null,
+  "pkts": null,
+  "tcp_hambre": false
+ },
+ "modem": {
+  "sent_bytes": 35973925,
+  "sent_pkts": 29153,
+  "drops": 0,
+  "overlimits": 0,
+  "backlog_max_bytes": 4070,
+  "backlog_frac_gt_mtu_bytes": 0.002699575780948708,
+  "backlog_samples": 2593,
+  "backlog_max_pkts": 3,
+  "backlog_frac_gt1": 0.002699575780948708
+ },
+ "router": {
+  "sent_bytes": 35973967,
+  "sent_pkts": 29154,
+  "drops": 29094,
+  "overlimits": 29142
+ }
+}

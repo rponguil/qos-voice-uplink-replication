@@ -1,0 +1,6 @@
+EXPLORATORY §6.8 — reimplementation from captures (own pcap reader) vs per-packet CSV of the probe
+runs with voice: 4150; parsed: 4150; failed: 0 []
+p99: max |diff| 0.0603 ms, median 0.0133, > 0.1 ms: 0
+jitter RFC 3550: max |diff| 0.0142 ms, median 0.0006, > 0.1 ms: 0
+worst p99: [(np.float64(0.0603), 'E1R_IOU_CBWFQ_L1000k_k3_m0.5_c1_f1514_r09'), (np.float64(0.0585), 'E1_LXR_FQC_L1000k_k1_m0.2_c1_f1514_r16'), (np.float64(0.0553), 'FLOOR_LXR_FIFO_L10000k_k0_m0.2_c1_f1514_floor_r14')]
+worst jitter: [(np.float64(0.0142), 'E2_IOU_CBWFQ_L5000k_k3_m0.2_c4_f1514_r14'), (np.float64(0.0093), 'FLOOR_IOU_FIFO_L1000k_k0_m0.2_c1_f1514_floor_r08'), (np.float64(0.008), 'E1_LXR_FQC_L3000k_k2_m0.2_c1_f1514_r13')]

@@ -1,0 +1,90 @@
+{
+ "name": "CNEG_IOU_CBWFQ_L5000k_k1_m0.2_c1_f1514_unmarked_r05",
+ "policy": "CBWFQ",
+ "rate": 4750000,
+ "iou_cpu": 0.04483904305196832,
+ "probe0": {
+  "n": 1999,
+  "min": 2.956122,
+  "p50": 7.272202,
+  "p95": 11.481635,
+  "p99": 12.378961,
+  "max": 27.87482,
+  "mean": 7.43260883941971,
+  "jitter3550": 6.269726896981891,
+  "sent": 3000,
+  "recv": 3000,
+  "loss": 0.0
+ },
+ "probe1": {
+  "n": 7672,
+  "min": 65.104664,
+  "p50": 91.636987,
+  "p95": 94.799005,
+  "p99": 108.539458,
+  "max": 129.221696,
+  "mean": 92.28544430709071,
+  "jitter3550": 3.095997415256663,
+  "sent": 20380,
+  "recv": 11539,
+  "loss": 0.4338076545632974
+ },
+ "tcp2": {
+  "rx_bps_total": 2227298.5426810035,
+  "rx_bps_steady": 2230225.100972404,
+  "rx_l2_bps_steady": null,
+  "lost": null,
+  "pkts": null,
+  "tcp_hambre": false
+ },
+ "modem": {
+  "sent_bytes": 35602156,
+  "sent_pkts": 26112,
+  "drops": 0,
+  "overlimits": 0,
+  "backlog_max_bytes": 4542,
+  "backlog_frac_gt_mtu_bytes": 0.4678044996121024,
+  "backlog_samples": 2578,
+  "backlog_max_pkts": 3,
+  "backlog_frac_gt1": 0.4678044996121024
+ },
+ "router": {
+  "if_out_drops": 8926,
+  "if_out_pkts": 26111,
+  "class-default": {
+   "pkts": 35037,
+   "bytes": 49116114,
+   "out_pkts": 26111,
+   "drops": 8926,
+   "exceed_drops": null
+  },
+  "CM-VOZ": {
+   "pkts": 0,
+   "bytes": 0,
+   "out_pkts": 0,
+   "drops": 0,
+   "exceed_drops": null
+  },
+  "CM-VIDEO": {
+   "pkts": 0,
+   "bytes": 0,
+   "out_pkts": 0,
+   "drops": 0,
+   "exceed_drops": null
+  },
+  "CM-DATOS": {
+   "pkts": 0,
+   "bytes": 0,
+   "out_pkts": 0,
+   "drops": 0,
+   "exceed_drops": null
+  },
+  "class-default#2": {
+   "pkts": 35037,
+   "bytes": 49116114,
+   "out_pkts": 26111,
+   "drops": 8926,
+   "exceed_drops": null
+  }
+ }
+}

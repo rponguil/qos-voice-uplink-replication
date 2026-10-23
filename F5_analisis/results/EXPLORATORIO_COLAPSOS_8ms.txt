@@ -1,0 +1,57 @@
+EXPLORATORY ANALYSIS — not part of the confirmatory plan. Tables only.
+collapse runs (voice loss in window >= 2 % in a cell whose median loss < 0.5 %): 10
+
+1. VOICE DELAY vs RESIDENTIAL-UDP DELAY, packet by packet (Pearson r at voice send instants, window [20, 60) s); same for video when present
+  CNEG_IOU_CBWFQ_L2000k_k3_m0.2_c1_f1514_unmarked    r06 loss 0.752: r(voice,res UDP) 0.952 [other runs median 0.049, range 0.001..0.114] | r(voice,video) 0.143 [others median 0.069, range -0.028..0.127]
+  CNEG_IOU_CBWFQ_L500k_k3_m0.2_c1_f1514_unmarked     r02 loss 0.085: r(voice,res UDP) -0.233 [other runs median 0.026, range -0.113..0.127] | r(voice,video) -0.157 [others median 0.073, range -0.012..0.122]
+  CNEG_IOU_CBWFQ_L500k_k3_m0.2_c1_f1514_unmarked     r08 loss 0.076: r(voice,res UDP) 0.02 [other runs median 0.026, range -0.113..0.127] | r(voice,video) -0.062 [others median 0.073, range -0.012..0.122]
+  CNEG_IOU_LLQ_L2000k_k1_m0.2_c1_f1514_unmarked      r16 loss 0.049: r(voice,res UDP) -0.266 [other runs median 0.072, range -0.041..0.117]
+  CNEG_IOU_LLQ_L3000k_k3_m0.2_c1_f1514_unmarked      r04 loss 0.026: r(voice,res UDP) 0.228 [other runs median 0.077, range 0.030..0.117] | r(voice,video) 0.259 [others median 0.112, range 0.058..0.154]
+  CNEG_IOU_LLQ_L3000k_k3_m0.2_c1_f1514_unmarked      r14 loss 0.804: r(voice,res UDP) 0.952 [other runs median 0.077, range 0.030..0.117] | r(voice,video) 0.165 [others median 0.112, range 0.058..0.154]
+  E1_LXR_FQC_L10000k_k3_m0.2_c1_f1514                r11 loss 0.592: r(voice,res UDP) 0.642 [other runs median 0.004, range -0.032..0.022] | r(voice,video) 1.000 [others median 0.004, range -0.027..0.030]
+  E2_LXR_FQC_L1000k_k3_m0.2_c4_f590                  r01 loss 0.239: r(voice,res UDP) 0.01 [other runs median 0.004, range -0.023..0.034] | r(voice,video) 0.037 [others median -0.003, range -0.022..0.020]
+  E2_LXR_FQC_L5000k_k3_m0.2_c1_f590                  r13 loss 0.712: r(voice,res UDP) 1.0 [other runs median -0.005, range -0.031..0.029] | r(voice,video) -0.027 [others median -0.000, range -0.036..0.025]
+  S_LXR_FQC_L5000k_k3_m0.2_c1_f1514_htbBc            r17 loss 0.160: r(voice,res UDP) -0.013 [other runs median 0.003, range -0.024..0.022] | r(voice,video) 0.048 [others median -0.005, range -0.029..0.039]
+
+2. COLLAPSE FREQUENCY PER POLICY GROUP (eligible runs = runs in cells whose median voice loss < 0.5 %)
+  CAKE (LXR)                             eligible   476 collapses  0 rate 0.0000 | expected if equal across groups  1.50 (binomial p 0.413)
+  CBWFQ/LLQ marked (IOU)                 eligible  1836 collapses  0 rate 0.0000 | expected if equal across groups  5.78 (binomial p 0.00563)
+  CBWFQ/LLQ marked (c7200)               eligible    68 collapses  0 rate 0.0000 | expected if equal across groups  0.21 (binomial p 1)
+  CBWFQ/LLQ unmarked (IOU fair-queue)    eligible   340 collapses  6 rate 0.0176 | expected if equal across groups  1.07 (binomial p 0.000814)
+  FQC (fq_codel, LXR)                    eligible   459 collapses  4 rate 0.0087 | expected if equal across groups  1.44 (binomial p 0.0585)
+  fq_codel (1024 queues, flows {k=1: 2, k=2: 3, k=3: 4} bulk UDP/TCP besides voice): expected collisions 1.49 vs observed 4 (Poisson P(X >= 4) = 0.0647)
+  IOU fair-queue: number of flow queues not reported by IOU ('show policy-map interface' gives only 'per-flow queue limit 16'; 'show hqf' not available). Implied by the observed rate if collisions with 4 bulk flows: N ~ 4 / rate.
+  -> unmarked rate 0.0176 implies N ~ 227 queues (assumption-laden, not verified)
+
+3. NUMBER OF QUEUES: fq_codel 'flows 1024' (router_post.txt of every FQC run); IOU fair-queue: not available (see above).
+
+4. CONFIRMATORY TESTS WITHOUT THE COLLAPSE RUNS (pairs containing one are dropped)
+  CNEG CNEG k=1       CNEG L=2000k k=1                   n 17->16 mean d -8.89 -> +0.10  decision not equivalent -> equivalent
+  CNEG CNEG k=3       CNEG L=500k k=3                    n 17->15 mean d +35.68 -> +2.03  decision not equivalent -> not equivalent
+  CNEG CNEG k=3       CNEG L=2000k k=3                   n 17->16 mean d +22.88 -> -0.29  decision not equivalent -> equivalent
+  CNEG CNEG k=3       CNEG L=3000k k=3                   n 17->15 mean d -27.23 -> -0.19  decision not equivalent -> equivalent
+  H4   H4 E2 k=3 FQC  E2 L=1000k k=3 frame=590 calls=4   n 17->16 mean d +57.48 -> +54.51  decision not comparable -> not comparable
+  H4   H4 E2 k=3 FQC  E2 L=5000k k=3 frame=590           n 17->16 mean d +206.80 -> -0.35  decision not comparable -> comparable
+
+5. THE ~8 ms OF IOU AT 1-3 Mbit/s
+  positive control: (median p99 - own floor) - T_s, ms
+    L=500k  IOU -0.06  LXR -0.83
+    L=1000k  IOU +8.09  LXR -0.35
+    L=2000k  IOU +8.18  LXR -0.19
+    L=3000k  IOU +8.26  LXR -0.16
+    L=5000k  IOU -0.14  LXR -0.13
+    L=10000k  IOU -  LXR -0.13
+  LLQ (E1, marked): (median p99 - own floor) - (T_s + T_voz), ms
+    L=500k  k=1 -0.01  k=2 -2.62  k=3 -1.20
+    L=1000k  k=1 +2.75  k=2 +2.25  k=3 +2.15
+    L=2000k  k=1 +3.02  k=2 +2.57  k=3 +2.51
+    L=3000k  k=1 +1.93  k=2 +1.79  k=3 +1.85
+    L=5000k  k=1 +1.86  k=2 +1.40  k=3 +1.41
+  c7200 (E4(b)) vs IOU at 1 Mbit/s, LLQ: (median p99 - own floor) - (T_s + T_voz), ms
+    k=1 IOU   median p99  18.65 floor   2.07 -> excess - (T_s+T_voz) +2.75
+    k=1 C7200 median p99  22.27 floor  12.02 -> excess - (T_s+T_voz) -3.58
+    k=3 IOU   median p99  18.05 floor   2.07 -> excess - (T_s+T_voz) +2.15
+    k=3 C7200 median p99  22.27 floor  12.02 -> excess - (T_s+T_voz) -3.58
+  c7200 vs IOU at 1 Mbit/s, CBWFQ: median p99 (ms)
+    k=1 IOU 57.02  c7200 63.11
+    k=3 IOU 121.09  c7200 126.62

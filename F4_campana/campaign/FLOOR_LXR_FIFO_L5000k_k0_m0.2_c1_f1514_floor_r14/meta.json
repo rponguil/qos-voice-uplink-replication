@@ -1,0 +1,153 @@
+{
+ "name": "FLOOR_LXR_FIFO_L5000k_k0_m0.2_c1_f1514_floor_r14",
+ "policy": "FIFO",
+ "rate_bps": 4750000,
+ "duration": 60,
+ "queue_limit": 64,
+ "voice_pct": 30,
+ "platform": "LXR",
+ "line_bps": 5000000,
+ "bc_bits": 19000,
+ "flows": [
+  {
+   "kind": "probe",
+   "node": "CW-VOZ",
+   "port": 5001,
+   "dscp": 46,
+   "size": 172,
+   "interval": 0.02,
+   "flow": 100
+  }
+ ],
+ "t_start": "2026-10-16T08:09:49",
+ "stagger_s": 0.0,
+ "iperf_stuck_at_cap": {},
+ "iperf_wait_left_s": 60.0,
+ "host_power": {
+  "governor": "performance",
+  "idle_disabled": [
+   "0",
+   "0",
+   "1",
+   "1"
+  ],
+  "ac_online": [
+   "1"
+  ]
+ },
+ "loadavg_start": [
+  0.3251953125,
+  0.341796875,
+  0.36083984375
+ ],
+ "loadavg_end": [
+  0.26953125,
+  0.318359375,
+  0.35302734375
+ ],
+ "iou_cpu_frac": 0.017788374105229297,
+ "timing_s": {
+  "t0": 0.0,
+  "config_done": 0.1,
+  "flows_started": 2.6,
+  "drained": 67.7,
+  "fetched": 67.9
+ },
+ "cell": {
+  "exp": "FLOOR",
+  "platform": "LXR",
+  "policy": "FIFO",
+  "L": 5000000,
+  "k": 0,
+  "m": 0.2,
+  "calls": 1,
+  "frame": 1514,
+  "marked": true,
+  "floor": true,
+  "Q": 64,
+  "reps": 10,
+  "dur": 60,
+  "r_frac": 0.95,
+  "be_eq_bc": false,
+  "htb_burst": null,
+  "cs1_data": false,
+  "host_load": false,
+  "voice_over": null,
+  "positive": false,
+  "custom": null,
+  "id": "FLOOR_LXR_FIFO_L5000k_k0_m0.2_c1_f1514_floor",
+  "warmup": 20
+ },
+ "rep": 14,
+ "seed_info": {
+  "seed": 20261013,
+  "script_sha256_16": {
+   "campaign.py": "ea6cc622762e8e09",
+   "runner.py": "cfe2bfb7dd54b592",
+   "f2lib.py": "aedaea85cb7dfe3c",
+   "modem_backlog.sh": "638fabd8008efa9c",
+   "udpprobe.py": "c0ef468e0efd2f7c"
+  },
+  "image": "sha256:98d8be25f2e4d0e9f12ff88ea1e54c512bc5883ad23091effc20ab32c7d628ec",
+  "protocol_sha256": "c84b7f584a29fad92d905746494c9005860a948e52f89df8ced7853e798e2f8f"
+ },
+ "reservations": {},
+ "R": 4750000,
+ "htb_burst_B": null,
+ "wall_s": 69.6,
+ "lxr_ingress_delta": {
+  "lo_rx_errors": 0,
+  "lo_rx_dropped": 0,
+  "lo_rx_missed": 0,
+  "eth0.10_rx_errors": 0,
+  "eth0.10_rx_dropped": 0,
+  "eth0.10_rx_missed": 0,
+  "eth0.20_rx_errors": 0,
+  "eth0.20_rx_dropped": 0,
+  "eth0.20_rx_missed": 0,
+  "eth0_rx_errors": 0,
+  "eth0_rx_dropped": 0,
+  "eth0_rx_missed": 0,
+  "eth1_rx_errors": 0,
+  "eth1_rx_dropped": 0,
+  "eth1_rx_missed": 0,
+  "softnet_dropped": 0,
+  "softnet_time_squeeze": 0
+ },
+ "host_load_threshold": 1.7,
+ "tcp_hambre": [],
+ "accounting": {
+  "sent_udp": 3000,
+  "sent_tcp_cap": 0,
+  "router_total": 3002
+ },
+ "per_class": {
+  "sent": {
+   "voz": 3000,
+   "datos": 0,
+   "default": 0
+  },
+  "classified": {
+   "total": 3002
+  },
+  "received_at_sink": {
+   "voz": 3000,
+   "datos": 0,
+   "default": 0
+  }
+ },
+ "voice_owd_capture_path": {
+  "n": 1999,
+  "p50": 0.5269050598144531,
+  "p99": 0.5979537963867188,
+  "sent_cap": 3000,
+  "recv_cap": 3000
+ },
+ "load1": 0.26953125,
+ "prerun_s": {
+  "c7200_stop": 0.0,
+  "cool_down": 0.0,
+  "c7200_boot": 0.0
+ },
+ "invalid_reasons": []
+}

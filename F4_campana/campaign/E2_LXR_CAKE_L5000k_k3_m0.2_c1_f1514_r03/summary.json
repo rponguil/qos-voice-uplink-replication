@@ -1,0 +1,78 @@
+{
+ "name": "E2_LXR_CAKE_L5000k_k3_m0.2_c1_f1514_r03",
+ "policy": "CAKE",
+ "rate": 4750000,
+ "iou_cpu": 0.018490167420263676,
+ "probe0": {
+  "n": 2000,
+  "min": 0.493668,
+  "p50": 1.657781,
+  "p95": 2.911999,
+  "p99": 3.037933,
+  "max": 3.931192,
+  "mean": 1.6889708455,
+  "jitter3550": 1.0571269012560516,
+  "sent": 3000,
+  "recv": 3000,
+  "loss": 0.0
+ },
+ "probe1": {
+  "n": 3790,
+  "min": 7.603114,
+  "p50": 12.774956,
+  "p95": 17.901021,
+  "p99": 18.670661,
+  "max": 22.494129,
+  "mean": 13.647151931926123,
+  "jitter3550": 2.222347666409226,
+  "sent": 20380,
+  "recv": 5706,
+  "loss": 0.7200196270853778
+ },
+ "tcp2": {
+  "rx_bps_total": 1093854.4410228212,
+  "rx_bps_steady": 1094687.7132501348,
+  "rx_l2_bps_steady": null,
+  "lost": null,
+  "pkts": null,
+  "tcp_hambre": false
+ },
+ "probe3": {
+  "n": 5715,
+  "min": 7.902308,
+  "p50": 21.991364,
+  "p95": 26.015885,
+  "p99": 26.422635,
+  "max": 28.453505,
+  "mean": 22.551732880664915,
+  "jitter3550": 1.2112779779720626,
+  "sent": 22497,
+  "recv": 8568,
+  "loss": 0.6191492198959861
+ },
+ "tcp4": {
+  "rx_bps_total": 1137853.3871739192,
+  "rx_bps_steady": 1135536.3362621013,
+  "rx_l2_bps_steady": null,
+  "lost": null,
+  "pkts": null,
+  "tcp_hambre": false
+ },
+ "modem": {
+  "sent_bytes": 35722214,
+  "sent_pkts": 28881,
+  "drops": 0,
+  "overlimits": 0,
+  "backlog_max_bytes": 3028,
+  "backlog_frac_gt_mtu_bytes": 0.003076923076923077,
+  "backlog_samples": 2600,
+  "backlog_max_pkts": 2,
+  "backlog_frac_gt1": 0.003076923076923077
+ },
+ "router": {
+  "sent_bytes": 35722298,
+  "sent_pkts": 28883,
+  "drops": 30925,
+  "overlimits": 88437
+ }
+}

@@ -1,0 +1,54 @@
+1. PILOT REPRODUCTION
+  floor IOU 500000: mine median/amp (3.812, 0.068) | pilot (3.812, 0.068) OK
+  floor IOU 1000000: mine median/amp (2.091, 1.031) | pilot (2.091, 1.031) OK
+  floor IOU 2000000: mine median/amp (1.227, 1.846) | pilot (1.227, 1.846) OK
+  floor IOU 3000000: mine median/amp (0.936, 0.049) | pilot (0.936, 0.049) OK
+  floor IOU 5000000: mine median/amp (0.703, 0.04) | pilot (0.703, 0.04) OK
+  floor LXR 500000: mine median/amp (3.732, 0.035) | pilot (3.732, 0.035) OK
+  floor LXR 1000000: mine median/amp (2.011, 0.045) | pilot (2.011, 0.045) OK
+  floor LXR 2000000: mine median/amp (1.149, 0.058) | pilot (1.149, 0.058) OK
+  floor LXR 3000000: mine median/amp (0.863, 0.025) | pilot (0.863, 0.025) OK
+  floor LXR 5000000: mine median/amp (0.644, 0.027) | pilot (0.644, 0.027) OK
+  floor LXR 10000000: mine median/amp (0.46, 0.025) | pilot (0.46, 0.025) OK
+  EMI base L=500000 k=1: median p99 LLQ 31.39 -> EMI 3.14 | pilot 31.39 -> 3.14 OK
+  EMI base L=500000 k=3: median p99 LLQ 30.19 -> EMI 3.02 | pilot 30.19 -> 3.02 OK
+  EMI base L=1000000 k=1: median p99 LLQ 18.82 -> EMI 2.00 | pilot 18.82 -> 2.00 OK
+  EMI base L=1000000 k=3: median p99 LLQ 17.9 -> EMI 2.00 | pilot 17.9 -> 2.00 OK
+  EMI base L=2000000 k=3: median p99 LLQ 10.76 -> EMI 2.00 | pilot 10.76 -> 2.00 OK
+  EMI base L=3000000 k=3: median p99 LLQ 7.44 -> EMI 2.00 | pilot 7.44 -> 2.00 OK
+  EMI base L=5000000 k=1: median p99 LLQ 5.31 -> EMI 2.00 | pilot 5.31 -> 2.00 OK
+  EMI base L=5000000 k=3: median p99 LLQ 4.99 -> EMI 2.00 | pilot 4.99 -> 2.00 OK
+  paired SD CNEG L= 1.0 k=3 m=0.2: mine 1.71 | P3b 1.71 OK
+  paired SD E1   L= 0.5 k=1 m=0.2: mine 1.00 | P3b 1.00 OK
+  paired SD E1   L= 0.5 k=3 m=0.2: mine 2.20 | P3b 2.20 OK
+  paired SD E1   L= 1.0 k=1 m=0.2: mine 1.30 | P3b 1.30 OK
+  paired SD E1   L= 1.0 k=3 m=0.2: mine 1.87 | P3b 1.87 OK
+  paired SD E1   L= 2.0 k=3 m=0.2: mine 2.03 | P3b 2.03 OK
+  paired SD E1   L= 3.0 k=3 m=0.2: mine 1.07 | P3b 1.07 OK
+  paired SD E1   L= 5.0 k=1 m=0.2: mine 0.30 | P3b 0.30 OK
+  paired SD E1   L= 5.0 k=3 m=0.2: mine 0.69 | P3b 0.69 OK
+  paired SD E1R  L= 1.0 k=3 m=3: mine 1.43 | P3b 1.43 OK
+
+2. SHUFFLED LABELS (E1 IOU k=3, CBWFQ/LLQ swapped at random within each pair; 200 shuffles; seed 20261022)
+  L=500k: H2 frac p<0.05 0.065 | TOST: mean of d over shuffles -0.201 ms, 95% CI contains 0 in 0.945, equivalence declared in 0.000
+  L=1000k: H2 frac p<0.05 0.045 | TOST: mean of d over shuffles -0.652 ms, 95% CI contains 0 in 0.970, equivalence declared in 0.000
+  L=2000k: H2 frac p<0.05 0.025 | TOST: mean of d over shuffles +0.024 ms, 95% CI contains 0 in 0.980, equivalence declared in 0.000
+  L=3000k: H2 frac p<0.05 0.070 | TOST: mean of d over shuffles +2.515 ms, 95% CI contains 0 in 0.940, equivalence declared in 0.000
+  L=5000k: H2 frac p<0.05 0.055 | TOST: mean of d over shuffles +1.278 ms, 95% CI contains 0 in 0.945, equivalence declared in 0.000
+
+3. SYNTHETIC H3 (seed 20261023)
+  cells: 19
+  p99 CBWFQ: true a=1.0 b=2.0 -> a=1.014 b=2.010 c=0.794; CI within a[0.992,1.034] b[1.974,2.046] | CI cluster a[0.993,1.035] b[1.971,2.053] -> contain truth: True/True
+  Delta: true a=0.0 b=2.0 -> a=0.015 b=2.005 c=0.844; CI within a[-0.004,0.035] b[1.969,2.038] | CI cluster a[0.003,0.040] b[1.971,2.029] -> contain truth: True/False
+
+PROBLEMS: synthetic H3 Delta
+
+4. EXTRA CHECKS (seed 20261025)
+  (a) TOST, true d=0, SD 2.03, n=17, margin +-2: equivalence at alpha 0.01 0.834 (P3b power 0.831); at 0.05 0.975; true d = margin: rejection rate 0.048 (should be <= 0.05)
+  (c) L=500k: |d| rms 96.8 ms -> SE of the mean over 200 shuffles 1.66 ms (shuffled d has spread ~|d|, so TOST +-EMI cannot declare equivalence: the expectation 'high' does not apply here)
+  (c) L=1000k: |d| rms 103.2 ms -> SE of the mean over 200 shuffles 1.77 ms (shuffled d has spread ~|d|, so TOST +-EMI cannot declare equivalence: the expectation 'high' does not apply here)
+  (c) L=2000k: |d| rms 110.6 ms -> SE of the mean over 200 shuffles 1.90 ms (shuffled d has spread ~|d|, so TOST +-EMI cannot declare equivalence: the expectation 'high' does not apply here)
+  (c) L=3000k: |d| rms 116.6 ms -> SE of the mean over 200 shuffles 2.00 ms (shuffled d has spread ~|d|, so TOST +-EMI cannot declare equivalence: the expectation 'high' does not apply here)
+  (c) L=5000k: |d| rms 114.1 ms -> SE of the mean over 200 shuffles 1.96 ms (shuffled d has spread ~|d|, so TOST +-EMI cannot declare equivalence: the expectation 'high' does not apply here)
+  (b) H3 p99 CBWFQ: coverage of the 95 % CI over 200 realizations: within-cell a 0.935 b 0.960 | cluster a 0.925 b 0.950
+  (b) H3 Delta: coverage of the 95 % CI over 200 realizations: within-cell a 0.955 b 0.940 | cluster a 0.950 b 0.935

@@ -1,0 +1,36 @@
+{
+ "name": "FLOOR_LXR_FIFO_L500k_k0_m0.2_c1_f1514_floor_r01",
+ "policy": "FIFO",
+ "rate": 475000,
+ "iou_cpu": 0.02101090655466174,
+ "probe0": {
+  "n": 1999,
+  "min": 3.582588,
+  "p50": 3.631197,
+  "p95": 3.676384,
+  "p99": 3.709698,
+  "max": 6.825957,
+  "mean": 3.6386802856428213,
+  "jitter3550": 0.019407032296335985,
+  "sent": 3000,
+  "recv": 3000,
+  "loss": 0.0
+ },
+ "modem": {
+  "sent_bytes": 642126,
+  "sent_pkts": 3003,
+  "drops": 0,
+  "overlimits": 0,
+  "backlog_max_bytes": 214,
+  "backlog_frac_gt_mtu_bytes": 0.0,
+  "backlog_samples": 2608,
+  "backlog_max_pkts": 1,
+  "backlog_frac_gt1": 0.0
+ },
+ "router": {
+  "sent_bytes": 642126,
+  "sent_pkts": 3003,
+  "drops": 0,
+  "overlimits": 0
+ }
+}
