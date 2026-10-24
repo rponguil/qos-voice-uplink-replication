@@ -1,0 +1,7 @@
+EXPLORATORY E4(b): CBWFQ p99 / (2*T_r + T_s), 1 Mbit/s, m = 0.2, one call; median of per-run ratio [95 % bootstrap CI]
+  C7200 k=1  bound 45.45 ms  ratio 1.389 [1.365, 1.414]  p99 median 63.11 ms
+  C7200 k=3  bound 45.45 ms  ratio 2.786 [2.771, 2.835]  p99 median 126.62 ms
+  IOU   k=1  bound 45.45 ms  ratio 1.255 [1.231, 1.282]
+  IOU   k=2  bound 45.45 ms  ratio 2.160 [2.146, 2.188]
+  IOU   k=3  bound 45.45 ms  ratio 2.664 [2.657, 2.694]
+  bound constants (ms): {'two_T_r_m02': 33.33, 'bound_L500k': 57.56, 'bound_L1000k': 45.45, 'bound_L5000k': 35.76}

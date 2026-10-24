@@ -37,7 +37,7 @@ caps.append("Fig. 1 (paper_fig1_E1_k3_p99.png). Voice one-way delay p99 against 
             "Lines: median of 17 runs; bands: interquartile range (IQR bands are narrower than the markers in most cells). Solid: Cisco IOS (IOU); dashed: Linux. Both axes logarithmic. "
             "LLQ, FIFO-C and CBWFQ were not run at 10 Mbit/s (IOU input limit).")
 
-# Fig 2: H3 — CBWFQ cell mean vs RFC 2212 bound, k = 1, 2, 3
+# Fig 2: H3 — CBWFQ cell median vs RFC 2212 bound, k = 1, 2, 3
 fig, ax = plt.subplots(figsize=(5.6, 4.6)); mx = 0
 for i, k in enumerate(("1", "2", "3")):
     xs, ys = [], []
@@ -45,13 +45,13 @@ for i, k in enumerate(("1", "2", "3")):
         for m in ((0.2,) if k != "3" else (0.2, 0.5, 1.0, 3.0)):
             cid = f"E1_IOU_CBWFQ_L{L}k_k{k}_m0.2_c1_f1514" if m == 0.2 else f"E1R_IOU_CBWFQ_L{L}k_k3_m{m:g}_c1_f1514"
             if cid in cells:
-                xs.append(2 * C.Tr(m) + C.Ts(L * 1000)); ys.append(float(np.mean(cells[cid])))
+                xs.append(2 * C.Tr(m) + C.Ts(L * 1000)); ys.append(float(np.median(cells[cid])))
     ax.scatter(xs, ys, s=42, color=SER[i], marker=MK[i], edgecolor=SURF, linewidth=1, zorder=3,
                label=f"k = {k}" + (" (E1, m = 0.2)" if k != "3" else " (E1 + E1-R, m = 0.2-3)")); mx = max(mx, max(xs), max(ys))
 lim = [0, mx * 1.08]; ax.plot(lim, lim, color=TXT2, lw=1.2, ls="--", label="RFC 2212 bound (measured = bound)")
 ax.set_xlim(lim); ax.set_ylim(lim); ax.set_xlabel("RFC 2212 bound 2·T_r + T_s (ms)"); ax.set_ylabel("Measured voice p99, CBWFQ (ms)")
 ax.legend(fontsize=8, loc="lower right"); fig.tight_layout(); fig.savefig(os.path.join(RES, "paper_fig2_H3_cota.png"), dpi=300); plt.close(fig)
-caps.append("Fig. 2 (paper_fig2_H3_cota.png). CBWFQ voice p99 (cell mean of 17 runs) against the weighted-fair-queuing bound of RFC 2212, "
+caps.append("Fig. 2 (paper_fig2_H3_cota.png). CBWFQ voice p99 (cell median of 17 runs) against the weighted-fair-queuing bound of RFC 2212, "
             "2·T_r + T_s, for k = 1, 2 and 3 competing classes. Points above the dashed line exceed the bound.")
 
 # Fig 3: MOS vs playout buffer, 1 Mbit/s, k=3, T_resto 100 ms; two curves per panel (Bpl 4.3 without / 25.1 with loss concealment)

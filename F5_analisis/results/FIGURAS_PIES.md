@@ -4,7 +4,7 @@ Fig. 0 (paper_fig0_topologia.pdf/.png). Emulated testbed (GNS3 3.0.6, single hos
 
 Fig. 1 (paper_fig1_E1_k3_p99.png). Voice one-way delay p99 against line capacity with three saturated competing classes (E1, k = 3, one call, m = 0.2). Lines: median of 17 runs; bands: interquartile range (IQR bands are narrower than the markers in most cells). Solid: Cisco IOS (IOU); dashed: Linux. Both axes logarithmic. LLQ, FIFO-C and CBWFQ were not run at 10 Mbit/s (IOU input limit).
 
-Fig. 2 (paper_fig2_H3_cota.png). CBWFQ voice p99 (cell mean of 17 runs) against the weighted-fair-queuing bound of RFC 2212, 2·T_r + T_s, for k = 1, 2 and 3 competing classes. Points above the dashed line exceed the bound.
+Fig. 2 (paper_fig2_H3_cota.png). CBWFQ voice p99 (cell median of 17 runs) against the weighted-fair-queuing bound of RFC 2212, 2·T_r + T_s, for k = 1, 2 and 3 competing classes. Points above the dashed line exceed the bound.
 
 Fig. 3 (paper_fig3_MOS_buffer.png). Estimated MOS (E-model, ITU-T G.107 with G.711 parameters of G.113) against the static playout buffer, at 1 Mbit/s with k = 3 and a rest-of-path delay of 100 ms, for Bpl = 4.3 (no packet-loss concealment, solid) and Bpl = 25.1 (concealment, dashed); median of 17 runs; where both curves give the same value, one label is shown. Values below 1.0 produced by the G.107 polynomial for small R are shown as 1.0. CBWFQ stays at or below 1.8 with buffers up to 60 ms and reaches 3.0-3.5 only with a 100-ms buffer and concealment; LLQ and CAKE stay at 4.2-4.4 in all 18 combinations (buffer 40/60/100 ms, rest-of-path 50/100/150 ms, Bpl 4.3/25.1).
 

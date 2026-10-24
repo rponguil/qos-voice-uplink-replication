@@ -1,7 +1,7 @@
 # CBWFQ vs LLQ for voice on slow shared home-office uplinks — reproducibility package
 
 Code, frozen protocol, analysis plan, per-run results and figures of the measurement campaign behind the manuscript
-*When Is Strict Priority Needed for Voice on Slow Home-Office Uplinks? A Replicated Emulation Study of CBWFQ, LLQ, fq_codel and CAKE* (title of the revised manuscript; to be checked against the final version).
+*When Is Strict Priority Needed for Voice on Slow Home-Office Uplinks? A Replicated Emulation Study of CBWFQ, LLQ, fq_codel and CAKE*.
 
 **Authors:** Ronald Ponguillo-Intriago, Derian S. Barros Palma, Jonathan A. Rodríguez Borbor.
 Facultad de Ciencias Matemáticas y Físicas, Universidad de Guayaquil, Guayaquil 090510, Ecuador.
@@ -69,6 +69,7 @@ Scripts marked **raw** need the Zenodo archive unpacked into `F4_campana/` (same
 | `paper_fig1`–`paper_fig5` | `figures_paper.py` | `runs.csv` and the CSV/JSON outputs above |
 | `paper_fig6_colapso.png` | `figures_paper.py` | raw (two runs) |
 | `paper_fig0_topologia.pdf/.png` | `fig_topologia.py` | — |
+| `EXPLORATORIO_E4B_COTA.txt`, `E4b_cota.csv`, `numbers_e4b.json` (c7200 CBWFQ against the RFC 2212 bound, exploratory) | `explore_e4b_bound.py` (`python3 explore_e4b_bound.py > ../results/EXPLORATORIO_E4B_COTA.txt`) | `runs.csv`, `E4a.csv` |
 
 Example from a clean clone (no raw data needed):
 
@@ -98,7 +99,7 @@ Dynamips measured at the start of each session). Changes made after the protocol
 
 ## 6. Open items (to be completed before release)
 
-- [ ] Title in `README.md` and `CITATION.cff` checked against the final manuscript.
+- [x] Title in `README.md` and `CITATION.cff` checked against the final manuscript.
 - [x] Zenodo data record with the raw archive; DOI in this README. To do: DOI in the manuscript (*Data availability*); publish the record.
 - [ ] Code DOI from the GitHub release `v1.0.0`.
 - [ ] `CHECKSUMS.sha256` at the repository root regenerated just before the release.
