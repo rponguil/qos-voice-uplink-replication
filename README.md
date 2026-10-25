@@ -6,7 +6,7 @@ Code, frozen protocol, analysis plan, per-run results and figures of the measure
 **Authors:** Ronald Ponguillo-Intriago, Derian S. Barros Palma, Jonathan A. Rodríguez Borbor.
 Facultad de Ciencias Matemáticas y Físicas, Universidad de Guayaquil, Guayaquil 090510, Ecuador.
 
-Repository: https://github.com/rponguil/qos-voice-uplink-replication. Data DOI: [10.5281/zenodo.23604110](https://doi.org/10.5281/zenodo.23604110). Code DOI: `[ZENODO CODE DOI]`.
+Repository: https://github.com/rponguil/qos-voice-uplink-replication. Data DOI: [10.5281/zenodo.23604110](https://doi.org/10.5281/zenodo.23604110). Code DOI (this version, v1.0.0): [10.5281/zenodo.23630217](https://doi.org/10.5281/zenodo.23630217).
 
 The folder layout mirrors the working project (`F2_…`, `F3_…`, `F4_…`, `F5_…`), so every script runs unchanged with its relative paths.
 
@@ -96,10 +96,3 @@ Dynamips measured at the start of each session). Changes made after the protocol
 - Code: MIT (`LICENSE`).
 - Data and results (`F4_campana/`, `F5_analisis/results/`): CC BY 4.0 (`LICENSE-data`).
 - Cite with `CITATION.cff`.
-
-## 6. Open items (to be completed before release)
-
-- [x] Title in `README.md` and `CITATION.cff` checked against the final manuscript.
-- [x] Zenodo data record with the raw archive; DOI in this README. To do: DOI in the manuscript (*Data availability*); publish the record.
-- [ ] Code DOI from the GitHub release `v1.0.0`.
-- [ ] `CHECKSUMS.sha256` at the repository root regenerated just before the release.

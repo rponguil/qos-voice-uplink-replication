@@ -49,7 +49,7 @@ for i, k in enumerate(("1", "2", "3")):
     ax.scatter(xs, ys, s=42, color=SER[i], marker=MK[i], edgecolor=SURF, linewidth=1, zorder=3,
                label=f"k = {k}" + (" (E1, m = 0.2)" if k != "3" else " (E1 + E1-R, m = 0.2-3)")); mx = max(mx, max(xs), max(ys))
 lim = [0, mx * 1.08]; ax.plot(lim, lim, color=TXT2, lw=1.2, ls="--", label="RFC 2212 bound (measured = bound)")
-ax.set_xlim(lim); ax.set_ylim(lim); ax.set_xlabel("RFC 2212 bound 2·T_r + T_s (ms)"); ax.set_ylabel("Measured voice p99, CBWFQ (ms)")
+ax.set_xlim(lim); ax.set_ylim(lim); ax.set_xlabel(r"RFC 2212 bound $2T_r + T_s$ (ms)"); ax.set_ylabel("Measured voice p99, CBWFQ (ms)")
 ax.legend(fontsize=8, loc="lower right"); fig.tight_layout(); fig.savefig(os.path.join(RES, "paper_fig2_H3_cota.png"), dpi=300); plt.close(fig)
 caps.append("Fig. 2 (paper_fig2_H3_cota.png). CBWFQ voice p99 (cell median of 17 runs) against the weighted-fair-queuing bound of RFC 2212, "
             "2·T_r + T_s, for k = 1, 2 and 3 competing classes. Points above the dashed line exceed the bound.")
@@ -116,7 +116,7 @@ caps.append("Fig. 4 (paper_fig4_H4_forest.png). H4: difference in voice p99 betw
             "Grey band: equivalence margin ±MEI (3.02 ms at 0.5 Mbit/s, 2 ms elsewhere). Filled marker: equivalent (TOST, Holm-adjusted p < 0.05); "
             "hollow marker: not shown equivalent. Values beyond the axis are printed at the right edge (with the CI when it reaches the plotted range: "
             "fq_codel, E2, 5 Mbit/s, 590 B, whose mean is driven by one run with a voice collapse). "
-            "Negative values mean lower delay than LLQ; part of that difference may be platform-specific (Section [TBD]).")
+            "Negative values mean lower delay than LLQ; part of that difference may be platform-specific (Section V-E).")
 
 # Fig 5: CBWFQ p99 vs over-reservation m, one panel per L, LLQ reference, budget lines
 fig, axs = plt.subplots(1, 5, figsize=(9.6, 3.2), sharey=True)
