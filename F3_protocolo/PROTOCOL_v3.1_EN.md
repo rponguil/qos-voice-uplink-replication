@@ -3,7 +3,7 @@
 **English translation of the frozen protocol.**
 - The original, in Spanish, was frozen on 10 October 2026 at 10:17 (UTC−5), before the pilot and the campaign.
 - SHA-256 of the original: `c84b7f584a29fad92d905746494c9005860a948e52f89df8ced7853e798e2f8f`. The same hash is recorded in the `meta.json` of every pilot and campaign run. A hash identifies content, not a date.
-- The original is available from the authors on request.
+- The original is deposited unmodified in `original_es/PROTOCOLO_v3.1.md`.
 - This translation renders the design, hypotheses, analysis and rules in full. It omits notes on the drafting history and cross-references to the project's internal working notes. Section numbers are those of the original.
 
 **Two-step freezing.**

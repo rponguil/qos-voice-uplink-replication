@@ -3,7 +3,7 @@
 **English translation of the frozen analysis plan.**
 - The original, in Spanish, was frozen on 17 October 2026 at 21:14 (UTC−5), before any test was computed.
 - SHA-256 of the original: `335da89f68ecd628a9fd3d6b313d8fc9e30b16516c7477103cec24d1be1182c3`. A hash identifies content, not a date.
-- The original is available from the authors on request.
+- The original is deposited unmodified in `original_es/PLAN_ANALISIS.md`.
 - This translation renders every test, rule, seed and output in full. It omits notes on the drafting and review history and cross-references to the project's internal working notes. Section numbers are those of the original.
 
 **Sources it consolidates:**

@@ -6,11 +6,20 @@ Code, frozen protocol, analysis plan, per-run results and figures of the measure
 **Authors:** Ronald Ponguillo-Intriago, Derian S. Barros Palma, Jonathan A. Rodríguez Borbor.
 Facultad de Ciencias Matemáticas y Físicas, Universidad de Guayaquil, Guayaquil 090510, Ecuador.
 
-Repository: https://github.com/rponguil/qos-voice-uplink-replication. Data DOI: [10.5281/zenodo.23604110](https://doi.org/10.5281/zenodo.23604110). Code DOI (this version, v1.0.0): [10.5281/zenodo.23630217](https://doi.org/10.5281/zenodo.23630217).
+Repository: https://github.com/rponguil/qos-voice-uplink-replication. Data DOI: [10.5281/zenodo.23604110](https://doi.org/10.5281/zenodo.23604110). Code DOI (this version, v1.1.0): [10.5281/zenodo.23936784](https://doi.org/10.5281/zenodo.23936784). Previous version (v1.0.0): [10.5281/zenodo.23630217](https://doi.org/10.5281/zenodo.23630217).
 
 The folder layout mirrors the working project (`F2_…`, `F3_…`, `F4_…`, `F5_…`), so every script runs unchanged with its relative paths.
 
-The protocol and the analysis plan were written and frozen in Spanish. The repository holds their English translations; each one gives the SHA-256 of its original, and the originals are available from the authors on request.
+### Frozen originals (Spanish) and translations
+
+The protocol and the analysis plan were written and frozen in Spanish. The originals are deposited unmodified, so that anyone can recompute their hashes: `F3_protocolo/original_es/PROTOCOLO_v3.1.md` and `F5_analisis/original_es/PLAN_ANALISIS.md`. They include the working notes they had when they were frozen. The English translations (`PROTOCOL_v3.1_EN.md`, `ANALYSIS_PLAN_v2_EN.md`) are the readable versions.
+
+There was no dated registration of the protocol before the campaign. The SHA-256 of the protocol is recorded in the `meta.json` of every pilot and campaign run.
+
+```
+sha256sum F3_protocolo/original_es/PROTOCOLO_v3.1.md   # c84b7f584a29fad92d905746494c9005860a948e52f89df8ced7853e798e2f8f
+sha256sum F5_analisis/original_es/PLAN_ANALISIS.md     # 335da89f68ecd628a9fd3d6b313d8fc9e30b16516c7477103cec24d1be1182c3
+```
 
 Folder names, result file names and some identifiers in the data keep their Spanish names: *viabilidad* = feasibility, *protocolo* = protocol, *campana* = campaign, *analisis* = analysis, *AUDITORIA* = audit, *VALIDACION* = validation, *CONFIRMATORIO* = confirmatory, *SENSIBILIDAD* = sensitivity, *EXPLORATORIO* = exploratory, *CIERRE* = closure, *suelo* = floor, *celdas* = cells, *corridas* = runs, *colapso* = collapse, *MUESTRA_VERIFICACION* = re-computation sample, `marcada` = flagged run, `tcp_hambre` = TCP starvation. Section numbers (§n) in the comments of `campaign.py`, `runner.py` and `f2lib.py` refer to the project's internal lab notebook; those three files are left unchanged because their hashes are recorded in every run's `meta.json`.
 
@@ -69,6 +78,7 @@ Scripts marked **raw** need the Zenodo archive unpacked into `F4_campana/` (same
 | `paper_fig1`–`paper_fig5` | `figures_paper.py` | `runs.csv` and the CSV/JSON outputs above |
 | `paper_fig6_colapso.png` | `figures_paper.py` | raw (two runs) |
 | `paper_fig0_topologia.pdf/.png` | `fig_topologia.py` | — |
+| `EXPLORATORIO_REVIEW2.txt`, `review2_numbers.json` (second review round: E4(a) with T_s on R, extended bound, positive control with T_s on R, E3 at 1.5 B_v, flows per fq_codel run, c7200 with T_s on R; exploratory) | `explore_review2.py` | `runs.csv`, `CPOS.csv`, run metadata |
 | `EXPLORATORIO_E4B_COTA.txt`, `E4b_cota.csv`, `numbers_e4b.json` (c7200 CBWFQ against the RFC 2212 bound, exploratory) | `explore_e4b_bound.py` (`python3 explore_e4b_bound.py > ../results/EXPLORATORIO_E4B_COTA.txt`) | `runs.csv`, `E4a.csv` |
 
 Example from a clean clone (no raw data needed):
@@ -89,7 +99,7 @@ and `F2_viabilidad/scripts/prep_session.py` followed by `campaign.py campaign1` 
 
 Warm-up W = 20 s; 40-s measurement window (60-s runs); n = 17 runs per cell (two sessions on different days); minimum effect of interest
 3.02 ms at 0.5 Mbit/s and 2.00 ms elsewhere; modem-queue threshold 6840 B; host-load threshold 1.70 (c7200 runs: 1.70 plus the idle load of
-Dynamips measured at the start of each session). Changes made after the protocol was frozen are listed in the manuscript (Table [DEV]) and marked [D] in the analysis plan. One rule was added after the analysis plan was frozen and before H5 was computed: any zero goodput in the measurement window counts as starvation in H5 (see `confirm.py`).
+Dynamips measured at the start of each session). Changes made after the protocol was frozen are listed in the manuscript (Table 6) and marked [D] in the analysis plan. One rule was added after the analysis plan was frozen and before H5 was computed: any zero goodput in the measurement window counts as starvation in H5 (see `confirm.py`).
 
 ## 5. Licence and citation
 

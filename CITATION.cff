@@ -14,8 +14,8 @@ authors:
     given-names: "Jonathan A."
     orcid: "https://orcid.org/0009-0002-2535-9530"
     affiliation: "Facultad de Ciencias Matemáticas y Físicas, Universidad de Guayaquil, Guayaquil 090510, Ecuador"
-version: "1.0.0"
-doi: "10.5281/zenodo.23630217"
+version: "1.1.0"
+doi: "10.5281/zenodo.23936784"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.23604110"
