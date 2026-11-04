@@ -14167,8 +14167,6 @@ d2128d2dd3196d5c06e70f36139b56cb2a02f9d4e5f4d9380749e2e7cf04cece  ./F5_analisis/
 e7163d238567e087abceea2c3121b01be29c20ceabc00bd52599cca2d2778675  ./F5_analisis/code/figures_paper.py
 7858a74ca22717775197935ed2be7d30a68ca006a907f1929d8460ae8640ecc1  ./F5_analisis/code/figures.py
 c562017b7950d71ae22d8903234f655252ddb8daa231f1394b1648fa2cafd8f6  ./F5_analisis/code/load_runs.py
-49f8298e978e4969424be7b00a22dc3409a79040853a1e05a3db7c9813b929c9  ./F5_analisis/code/__pycache__/core.cpython-312.pyc
-5802ffa791dc8619a0e656d8ebd29ff875dcd16d10dbc27dd7401e4522ab77bf  ./F5_analisis/code/__pycache__/stats_lib.cpython-312.pyc
 422def9bf83f924fcb49804580cfb4a3a9d6d6fc5768f3dd61f4eebeb4d826d0  ./F5_analisis/code/reimpl_capture.py
 b8dd042008d9cbb7b3b5bbd75da7735d6b3fde559b88ec7e9a628f618cd5880b  ./F5_analisis/code/sens.py
 6858b63f7298e57436da9c66d63abd49ac7f005ca82fbbb2fa92851407eccfa3  ./F5_analisis/code/stats_lib.py
